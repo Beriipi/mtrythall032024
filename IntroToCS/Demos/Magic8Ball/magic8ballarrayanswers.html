@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic 8 Ball Answers</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #answers{
+            height: 10rem;
+            width: 10rem;
+            margin: auto;
+            background-color: black;
+            border: 3px solid silver;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Magic 8 Ball Answers</h1>
+    <div id="answers">
+
+    </div>
+    <script>
+        //create array variable for magic 8 ball answers
+        let answers = [];
+
+        //populate array with index values
+        answers[0] = "It is certain";
+        answers[1] = "It is decididly so";
+        answers[2] = "Without a doubt";
+        answers[3] = "Yes definitely";
+        answers[4] = "You may rely on it";
+        answers[5] = "As I see it, yes";
+        answers[6] = "Most likely";
+        answers[7] = "Outlook good";
+        answers[8] = "Yes";
+        answers[9] = "Signs point to yes";
+        answers[10] = "Reply hazy, try again";
+        answers[11] = "Ask again later";
+        answers[12] = "Better not tell you now";
+        answers[13] = "Cannot predict now";
+        answers[14] = "Concentrate and ask again";
+        answers[15] = "Don't count on it";
+        answers[16] = "My reply is no";
+        answers[17] = "My sources say no";
+        answers[18] = "Outlook not so good";
+        answers[19] = "Very doubtful";
+
+        //window.alert(answers[2]);
+
+        //assign answer to answer box
+        let magic8ballDiv;
+
+        magic8BallDiv = window.document.querySelector("#answers");
+        magic8BallDiv.style.textAlign = "center";
+        magic8BallDiv.style.padding = "1rem";
+
+        //create a random number from 0 to 19
+        let randomNum;
+        randomNum = Math.floor(Math.random() * 19 +1 ) ;
+
+        magic8BallDiv.innerHTML = answers[randomNum];
+    </script>
+</body>
+</html>

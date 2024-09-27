@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Functions</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events and Functions</h1>
+    <button id="hello" onclick="sayHello()">
+        Say Hello
+    </button>
+    <button id="hola">
+        Say Hola
+    </button>
+    <script>
+        //old way cof adding events
+function sayHello(){
+    window.alert('hello!');
+}
+
+        //new way of adding events
+        //get your target
+        //add an event to the target
+        //call a function from target
+
+        //get target
+        //create a variable and a ssign a value
+        const btnHola = window.document.querySelector('#hola');
+        //add an event
+        btnHola.addEventListener('mouseover', sayHola);
+        //create the function
+        function sayHola(){
+            window.alert('hola!');
+        }
+    </script>
+</body>
+</html>

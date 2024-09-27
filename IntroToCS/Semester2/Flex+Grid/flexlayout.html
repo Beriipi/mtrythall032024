@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+            color: black;
+        }
+        #wrapper{
+            background-color: purple;
+            min-height: 90%;
+            width: 80%;
+            margin: auto;
+            margin-top: 3rem;
+        }
+        nav{
+            min-height: 150px;
+            background-color: #D85B0C;
+            padding: 1rem;
+            border: 1px solid black;
+            flex-basis: 32%;
+        }
+        main{
+            min-height: 150px;
+            background-color:khaki;
+            padding: 1rem;
+            border: 1px solid black;
+            flex-basis: 50%;
+        }
+        #fb1{
+            display: flex;
+            flex-direction:row;
+        }
+        #articles{
+            min-height: fit-content;
+            background-color: #fff;
+            flex-basis: 50%;
+        }
+        #fb2{
+            display: flex;
+            flex-direction: row;
+        }
+        #fb3{
+            display: flex;
+            flex-direction: row;
+        }
+        #bottom{
+            flex-basis: 75%;
+            min-height: fit-content;
+        }
+        #fb4{
+            display: flex;
+            flex-direction: row;
+        }
+        #fb5{
+            display: flex;
+            flex-direction: row;
+        }
+        #fb6{
+            display: flex;
+            flex-direction: row;
+        }
+        article{
+            min-height: 150px;
+            background-color: #427D4C;
+            padding: 1rem;
+            border: 1px solid black;
+            flex-basis: 80%;
+            justify-content: center;
+        }
+        footer{
+            min-height: 150px;
+            background-color: #D44C8C;
+            padding: 1rem;
+            border: 1px solid black;
+            flex-basis: 32%;
+        }
+        section{
+            background-color: #10BAD9;
+            min-height: 150px;
+            padding: 1rem;
+            border: 1px solid black;
+        }
+        #section1{
+            flex-basis: 68%;
+        }
+        #section2{
+            flex-basis: 68%;
+        }
+        aside{
+            min-height: 150px;
+            background-color: #BB5CD4;
+            padding: 1rem;
+            border: 1px solid black;
+            flex-basis: 25%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="fb1">
+            <main>Main</main>
+            <div id="articles">
+                <div id="fb2">
+                    <article id="article1">Article 1</article>
+                    <article id="article2">Article 2</article>
+                </div>
+                <div id="fb3">
+                    <article id="article3">Article 3</article>
+                    <article id="article4">Article 4</article>
+                </div>
+            </div>
+        </div>
+        <div id="fb4">
+            
+            <div id="bottom">
+                <div id="fb5">
+                    <nav>Nav</nav>
+                    <section id="section1">Section 1</section>
+                </div>
+                <div id="fb6">
+                    <section id="section2">Section 2</section>
+                    <footer>Footer</footer>
+                </div>
+            </div>
+            <aside>Aside</aside>
+        </div>
+    </div>
+    <!--end wrapper-->
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbot Layout</title>
+    <style>
+        body{background-color: black;}
+        #wrapper{border:3px solid white;
+        max-width: 1024px;
+    margin: auto;}
+        div{background-color: black;
+        min-height: 100px;
+    border: 1px solid white;}
+    #flexbox1{display:flex;}
+    #one, #two, #four{flex-basis: 50%;}
+    #three, #five, #six, #seven, #eight, #nine{flex-basis: 25%;}
+    #one{background-color:pink;}
+    #two{background-color:lightblue;}
+    #flexbot2{display:flex;}
+    #three{background-color: lightblue;}
+    #four{background-color:lightgoldenrodyellow;}
+    #five{background-color: pink;}
+    #flexbot3{display: flex;}
+    #six{background-color: papayawhip;}
+    #seven{background-color: paleturquoise;}
+    #eight{background-color: cornsilk;}
+    #nine{background-color:lightblue;}
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+<div id="flexbox1">
+            <div id="one">One</div>
+            <div id="two">Two</div>
+</div>
+
+<div id="flexbot2">
+            <div id="three">Three</div>
+            <div id="four">Four</div>
+            <div id="five">Five</div>
+</div>
+
+<div id="flexbot3">
+            <div id="six">Six</div>
+            <div id="seven">Seven</div>
+            <div id="eight">Eight</div>
+            <div id="nine">Nine</div>
+</div>
+
+    </div>
+    <!-- End the wrapper -->
+</body>
+</html>

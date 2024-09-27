@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    color: white;
+}
+h1{
+    background-color: grey;
+    text-align: center;
+    padding: 1rem;
+}
+a{
+    color: white;
+}
+a:hover{
+    color: silver;
+}
+nav{
+    background-color: darkgray;
+    padding: 1rem;
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}

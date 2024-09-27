@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Images</title>
+    <style>
+        html
+        {
+            color: white;
+            background-image: url(Images/super-mario-bros-level-1-ydei5awgn5tmx76t.jpeg);
+            background-size: cover;
+            background-position: fixed;
+        background-repeat: no-repeat;
+        height: 100%;}
+
+        #mario{
+            width: 200px;
+            height: 200px;
+            background-color: none;
+            margin-top: 400px;
+            background-image: url(Images/mario.png);
+            background-repeat: no-repeat;
+            animation-name: jump;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            }
+        @keyframes jump{
+            from{
+                margin-top: 400px;
+                }
+            to{
+                margin-top: 0px;
+                }
+            }
+        #mariocontainer{
+            width: 250px;
+            height: 250px;
+            background-color: none;
+            animation-name: right-left;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            }
+        @keyframes right-left{
+            from{
+                margin-left: -200px;
+                }
+            to{
+                margin-left: 100%;
+                }
+            }
+    </style>
+</head>
+<body>
+    <h1>Animated Images</h1>
+    <div id="mariocontainer">
+        <div id="mario"></div>
+    </div>
+</body>
+</html>

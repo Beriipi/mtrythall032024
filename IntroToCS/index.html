@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terrance Trythall - Portfolio</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{ background-color: #38545b;
+            color: whitesmoke;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 2;
+            background-image: url(Images/images-shark/seamless-pattern-shark-on-teal-background-small-texture-of-marine-fish-for-any-purpose-vector.jpg);
+            background-attachment: fixed;
+            background-size:cover;
+        }
+        #container{
+            border-radius: 1.5rem 1.5rem 0 0;
+            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            background-color: #476d78;
+            color: whitesmoke;
+            margin-top:60px;
+        }
+        #wrapper{
+            border-radius: 1.9rem;
+            margin: 0 auto;
+            max-width: 960px;
+            color: whitesmoke;
+        }
+        #pageheader{
+            background-color: #558391;
+            min-height: 170px;
+            padding: 2rem;
+            border-radius: 1.5rem 1.5rem 0 0;
+            border-bottom: 3px solid #476d78;
+            background-image: url(Images/images-shark/white\ bg\ w\ sharks.avif);
+        }
+        #logo{
+        background-color: none;
+        height: 130px;
+        width: 130px;
+        transition: all 2s;
+        background-image: url(Images/images-shark/colored-logo.png);
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: 5px;
+        left: calc(50% - 75px);
+        }
+        #logo:hover{
+            transform: rotate(-360deg);
+        }
+        blockquote{
+            text-align: center;
+            margin: auto;
+            font-size: 24px;
+            font-weight: bolder;
+            color: whitesmoke;
+            text-shadow: 2px 2px 2px teal;
+            padding-top: 40px;
+            color: #1A4B69;
+        }
+        #quote{
+            background-color: none;
+            color: #1A4B69;
+            text-align: right;
+            text-shadow: 1px 1px 1px gray;
+            width: 80%;
+            margin: auto;
+        }
+        #pagenav{
+            background-color: #558391;
+            padding: 1rem;
+            color: whitesmoke;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        #pagenav>a{
+            color: #FDFDFD;
+        }
+        #media{
+            min-height: 250px;
+            background-color: #558391;
+            padding: 1rem;
+            color: whitesmoke;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        iframe{
+            width: 80%;
+            aspect-ratio: 16/9;
+            margin: auto;
+            display: block;
+        }
+        #pagemain{
+            background-color: #558391;
+            color: whitesmoke;
+            min-height: 250px;
+            padding-left: 1rem;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        #career{
+            min-height: 200px;
+            background-color: #558391;
+            color: whitesmoke;
+            padding: 1rem;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        .semester{
+            background-color: #558391;
+            min-height: 200px;
+            color: whitesmoke;
+            padding: 1rem;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        #pagefooter{
+            background-color: #558391;
+            color: #FDFDFD;
+            padding: 1rem;
+            text-align: center;
+            border-top: 3px solid #476d78;
+            border-bottom: 3px solid #476d78;
+        }
+        #subfooter{
+            background-color: #558391;
+            color: #FDFDFD;
+            padding: 1rem;
+            min-height: 150px;
+            text-align: center;
+            border-top: 3px solid #476d78;
+            border-radius: 0 0 1.5rem 1.5rem;
+            position: relative;
+        }
+        #shark{
+            height: 100px;
+            width: 100px;
+            background-color: none;
+            position: absolute;
+            top: 50px;
+            left: 25px;
+            background-image: url(Images/images-shark/footershark.png);
+        }
+        #shark2{
+            height: 100px;
+            width: 100px;
+            background-color: none;
+            position: absolute;
+            top: 50px;
+            right: 25px;
+            background-image: url(Images/images-shark/footershark2.png);
+        }
+
+        /*FOOTER LINKS*/
+        #chagoyan{color: #FDFDFD;}
+        #chagoyan:hover{color: black;}
+        #color{color: #FDFDFD;}
+        #color:hover{color: #FF9900;}
+        #aeries{color: #FDFDFD;}
+        #aeries:hover{color: #193878;}
+        #web{color: #FDFDFD;}
+        #web:hover{color: #CD5E28;}
+        #imago{color: #FDFDFD;}
+        #imago:hover{color: #216C98;}
+        #listenwise{color: #FDFDFD;}
+        #listenwise:hover{color: #72BFC0;}
+        #google{color: #FDFDFD;}
+        #google:hover{color: #212124;}
+        #classroom{color: #FDFDFD;}
+        #classroom:hover{color: #DA1B61;}
+        #minga{color: #FDFDFD;}
+        #minga:hover{color: #243A75;}
+
+        /*SUBFOOTER LINKS*/
+        #youtube{color: #FDFDFD;}
+        #youtube:hover{color: #FF191A;}
+        #roblox{color: #FDFDFD;}
+        #roblox:hover{color: #232527;}
+        #animesuge{color: #FDFDFD;}
+        #animesuge:hover{color: #831212;}
+
+        #flexbox001{
+            display: flex;
+            flex-direction: column;
+        }
+        #semester1, #semester2{
+            flex: 1;
+        }
+        @media screen and (min-width:600px){
+            #flexbox001{
+                flex-direction: row;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">
+            <div id="logo"></div>
+
+                <blockquote>
+                    “Be yourself; everyone else is already taken.”
+                </blockquote>
+
+                <p id="quote">
+                    - Oscar Wilde
+                </p>
+            </header>
+
+            <nav id="pagenav">
+                <a href="#career">Career</a> | 
+                <a href="#semester1">Semester 1</a> | 
+                <a href="#semester2">Semester 2</a>
+            </nav>
+
+            <div id="media">
+                <iframe src="https://www.youtube.com/embed/8Qi39aL3RSE?si=QBLJiu_pNO_gE543" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <main id="pagemain">
+                <h1>Terrance Trythall</h1>
+                <h2>Portfolio</h2>
+                <p>
+                    Welcome to My Portfolio. My name is Terrance and this is my second year taking a Web Page Design class at Coalinga Highschool. Another class I enjoy that I'm taking this year is Art, because I've gained the time and motivation to learn to draw better. Other things in my free time that I like to do are play videogames, watch anime, and listen to music.
+                </p>
+            </main>
+
+            <section id="career">
+                <a name="career"></a>
+                <h1>Career</h1>
+                <ul>
+                    <li><a href="Career/Morgan Trythall - Career Action Plan Worksheet.pdf">Career Action Plan</a></li>
+                </ul>
+            </section>
+                <div id="flexbox001">
+                    
+                    <section id="semester1" class="semester">
+                    <a name="semester1"></a>
+                    <h2>Semester 1</h2>
+                                
+                                <ul>
+                                    <li><a target="_blank" href="Semester1/A001JS/a001js.html">A001JS</a></li>
+                                    <li><a target="_blank" href="Semester1/A002JS/a002js.html">A002JS</a></li>
+                                    <li><a target="_blank" href="Semester1/A003JS/a003js.html">A003JS</a></li>
+                                    <li><a target="_blank" href="Semester1/A004JS/a004js.html">A004JS</a></li>
+                                    <li><a target="_blank" href="Semester1/A005JS/a005js.html">A005JS</a></li>
+                                    <li><a target="_blank" href="Semester1/A006JS/a006js.html">A006JS</a></li>
+                                    <li><a target="_blank" href="Activities/ResponsiveWebDesign/responsivewebdesign.html">OYO1</a></li>
+                                    <li><a target="_blank" href="Activities/2ResponsiveWebDesign/2responsivewebdesign.html">OYO1.2</a></li>
+                                    <li><a target="_blank" href="Semester1/A029J23/a029j23.html">A029J23</a></li>
+                                    <li><a target="_blank" href="Activities/Popsicle/popsicle.html">Popsicle</a></li>
+                                    <li><a target="_blank" href="Semester1/A029J3A/a029j3a.html">A029J3A</a></li>
+                                </ul>
+                                </section>
+                                <section id="section2" class="semester">
+                                    <a name="semester2"></a>
+                                    <h1>Semester 2</h1>
+                                    <ul>
+                                        <li><a target="_blank" href="Demos/ForLoopMultiplicationTable/forloopmultiplicationtable.html">Multiplication Table</a></li>
+                                        <li><a target="_blank" href="Demos/ForLoopMultiplicationTableAdvanced/forloopmultiplicationtableadvanced.html">Advanced Table</a></li>
+                                        <li><a target="_blank" href="Semester2/A029G8/a029g8.html">A029G8</a></li>
+                                        <li><a target="_blank" href="Semester2/A029JSA2/a029j3a2.html">A029J3A2</a></li>
+                                        <li><a target="_blank" href="Semester2/A029J3A2GRFX/a029j3a2grfx.html">A029J3A2GRFX</a></li>
+                                        <li><a target="_blank" href="Semester2/A029J3A2A/a029j3a2a.html">A029J3A2A</a></li>
+                                        <li><a target="_blank" href="Semester2/A029J3A2AGRPHX/a029j3a2agrphx.html">A029J3A2AGRPHX</a></li>
+                                        <li><a target="_blank" href="Semester2/A029j3a2aH/a029j3a2ah.html">A029J3A2AH</a></li>
+                                        <li><a target="_blank" href="Demos/CSSGridAreas001/cssgridareas001.html">CSSGridAreas001</a></li>
+                                        <li><a target="_blank" href="Semester2/A029j3a2aHJ/a029j3a2ahj.html">A029J3A2AHJ</a></li>
+                                        <li><a target="_blank" href="Activities/RandomNumbersGenerator/randomnumbersgenerator.html">RandomNumbersGenerator</a></li>
+                                        <li><a target="_blank" href="Activities/RandomBugGenerator/randombuggenerator.html">RandomBugGenerator</a></li>
+                                        <li><a target="_blank" href="Semester2/Flex+Grid/flexlayout.html">Flexlayout</a></li>
+                                        <li><a target="_blank" href="Semester2/Flex+Grid/gridlayout.html">Gridlayout</a></li>
+                                        <li><a target="_blank" href="Demos/CSSGridAreasWMediaQueries/cssgridareaswmediaqueries.html">CSS Grid Areas with Media Queries</a></li>
+                                        <li><a target="_blank" href="Demos/RandomColorBox/randomcolorbox.html">Random Color Box</a></li>
+                                        <li><a target="_blank" href="Demos/Magic8Ball/magic8ball.html">Magic 8 Ball</a></li>
+                                        <li><a target="_blank" href="Projects/NewYorkCity/index.html">NYC Project</a></li>
+                                        <li><a target="_blank" href="Demos/HamburgerMenu/hamburgermentu.html">Hamburger Menu</a></li>
+                                        <li><a target="_blank" href="Demos/HamburgerMenu/googlemap.html">Google Maps</a></li>
+                                    </ul>
+                                </section>
+                    
+                </div>
+            <footer id="pagefooter">
+                <a target="_blank" href="https://chsserver01.org" id="chagoyan">chagoyan.com</a> |
+
+                <a target="_blank" href="https://chsserver01.org/chaggy.net/colortheory/colorscheme2/index-en.html"id="color">color scheme</a> |
+
+                <a target="_blank" href="https://coalingahuron.aeries.net"id="aeries">aeries</a> |
+
+                <a target="_blank" href="https://chs.chusd.org/"id="web">chs web</a> |
+
+                <a target="_blank" href="https://go.weareimago.com/"id="imago">imago</a> |
+
+                <a target="_blank" href="https://listenwise.com/"id="listenwise">listenwise</a> |
+
+                <a target="_blank" href="https://www.google.co.uk/"id="google">google</a>
+
+                <br>
+
+                <a target="_blank" href="https://minga.io"id="minga">minga</a> |
+
+                <a target="_blank" href="https://classroom.google.com/c/NjUzNjk5MDEzOTY5"id="classroom">classroom</a>
+
+
+            </footer>
+            <footer id="subfooter">
+                <a target="_blank" href="https://www.youtube.com/"id="youtube">youtube</a> |
+
+                <a target="_blank" href="https://www.roblox.com/"id="roblox">roblox</a> |
+
+                <a target="_blank" href="Activities/portfolio/animesuge.html"id="animesuge">animesuge</a>
+
+
+                <p> &copy; Terrance Trythall 2023 - 
+                    
+                    <script>
+                        window.document.write(new Date().getFullYear());
+                    </script>
+                </p> 
+                <div id="shark"></div>
+                <div id="shark2"></div>
+            </footer>
+        </div> <!-- end wrapper -->
+    </div> <!-- end container -->
+</body>
+</html>

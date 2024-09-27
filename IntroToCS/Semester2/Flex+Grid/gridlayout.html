@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        #wrapper{
+            background-color: purple;
+            min-height: 100vh;
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-areas: 
+            "main main article1 article2"
+            "main main article3 article4"
+            "nav section1 section1 aside"
+            "section2 section2 footer aside"
+            ;
+        }
+        nav{
+            min-height: 150px;
+            background-color: #D85B0C;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: nav;
+        }
+        main{
+            min-height: 150px;
+            background-color:khaki;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: main;
+        }
+        article{
+            min-height: 150px;
+            background-color: #427D4C;
+            padding: 1rem;
+            border: 1px solid black;
+        }
+        #article1{grid-area: article1;}
+        #article2{grid-area: article2;}
+        #article3{grid-area: article3;}
+        #article4{grid-area: article4;}
+        #section1{grid-area: section1;}
+        #section2{grid-area: section2;}
+        section{
+            background-color: #10BAD9;
+            min-height: 150px;
+            padding: 1rem;
+        }
+        footer{
+            min-height: 150px;
+            background-color: #D44C8C;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: footer;
+        }
+        aside{
+            min-height: 150px;
+            background-color: #BB5CD4;
+            padding: 1rem;
+            border: 1px solid black;
+            grid-area: aside;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+    <main>Main</main>
+        <article id="article1">Article 1</article>
+        <article id="article2">Article 2</article>
+        <article id="article3">Article 3</article>
+        <article id="article4">Article 4</article>
+        <nav>Nav</nav>
+        <section id="section1">Section 1</section>
+        <section id="section2">Section 2</section>
+        <footer>Footer</footer>
+        <aside>Aside</aside>
+    </div>
+    <!--end wrapper-->
+</body>
+</html>

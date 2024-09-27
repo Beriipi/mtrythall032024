@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables - DOM Object, Event, Function</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        div{
+            border: 4px solid white;
+            margin: 2rem;
+            width: 150px;
+            height: 150px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Variables - DOM Object, Event, Function</h1>
+
+    div#d${d$}*4 =
+    <div id="d1" onclick="changeRed()">d1</div>
+    <div id="d2" onmouseover="changeBlue()">d2</div>
+    <div id="d3" ondblclick="changeGreen()">d3</div>
+    <div id="d4">d4</div>
+
+    <script>
+        //style using dot notation
+        
+
+        //call funtion changeRed
+        //"changeRed();"
+
+        //create functions
+        //a function is a code block that runs when called (clicked)
+        //a function is a mini program
+        function changeRed(){
+            window.document.getElementById('d1').style.backgroundColor = 'red';
+        }
+        function changeBlue(){
+            window.document.getElementById('d2').style.borderRadius = '50%';
+            window.document.getElementById('d2').style.padding = '5rem';
+            window.document.getElementById('d2').style.backgroundColor = 'blue';
+        }
+        function changeGreen(){
+            //create DOM object variable
+            let myDiv;
+            myDiv = window.document.getElementById('d3');
+            myDiv.style.backgroundColor = "green";
+            myDiv.style.border = "4px solid grey";
+            myDiv.style.marginLeft = "500px";
+            myDiv.style.transform = "scale(.25)";
+        }
+    </script>
+
+</body>
+</html>

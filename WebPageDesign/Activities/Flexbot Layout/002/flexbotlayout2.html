@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbot Layout 2</title>
+    <style>
+        body{background-color: black;}
+        #wrapper{border:3px solid white;
+        max-width: 1024px;
+        margin: auto;}
+    div{background-color: black;
+        min-height: 100px;
+        border: 1px solid white;}
+    #flexbox{display: flex;}
+    #sectionq1, #sectionq2, #sectionq3, #sectionq4{
+        flex-basis: 25%;
+        min-height:300px;}
+    #header{background-color: pink;}
+    #media{background-color: paleturquoise;}
+    #sectionq1{background-color: lightgoldenrodyellow;}
+    #sectionq2{background-color: cornsilk;}
+    #sectionq3{background-color: lightyellow;}
+    #sectionq4{background-color: blanchedalmond;}
+    #footer{background-color: pink;}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    
+        <div id="header">#header</div>
+        <div id="media">#media</div>
+    <div id="flexbox">
+            <div id="sectionq1">#sectionq1</div>
+            <div id="sectionq2">#sectionq2</div>
+            <div id="sectionq3">#sectionq3</div>
+            <div id="sectionq4">#sectionq4</div>
+    </div>
+        <div id="footer">#footer</div>
+</div>    
+</body>
+</html>

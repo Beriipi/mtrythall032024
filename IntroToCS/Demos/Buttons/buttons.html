@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Buttons</title>
+    <style>
+        button{background-color: grey;
+            border-radius: 25px;
+            padding: .5rem;
+        }
+        body{
+            background-color: black;
+        }
+        .display{
+            height: 100px;
+            width: 100px;
+            background-color: lightblue;
+            margin: 2rem auto;
+            border: 1px solid grey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeDivOne()">Change Div 1</button>
+    <button onclick="changeDivTwo()">Change Div 2</button>
+    <button onclick="changeDivThree()">Change Div 3</button>
+    <button onclick="changeDivFour()">Change Div 4</button>
+
+    <hr />
+
+    <!-- div.display#d$$$*4 -->
+    <div class="display" id="d001">d001</div>
+    <div class="display" id="d002">d002</div>
+    <div class="display" id="d003">d003</div>
+    <div class="display" id="d004">d004</div>
+
+    <script>
+        //Create functions
+        function changeDivOne(){
+            //Create a variable
+            let d1;
+            //Assign a value
+            d1 = window.document.querySelector('#d001');
+            d1.style.backgroundColor = 'blue';
+            d1.style.color = 'white';
+        }
+        function changeDivTwo(){
+            let d2;
+            d2 = window.document.querySelector('#d002');
+            d2.style.borderRadius = '50%';
+        }
+        function changeDivThree(){
+            let d3;
+            d3 = window.document.querySelector('#d003');
+            d3.style.width = '200px';
+        }
+        function changeDivFour(){
+            let d4;
+            d4 = window.document.querySelector('#d004');
+            d4.style.backgroundColor = 'black';
+            d4.style.borderColor = 'black';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Positioning</title>
+    <style> 
+    /* mobile first design */
+        #pageheader{
+            background-color: red;
+            min-height: 200px;
+            position: relative;
+        }
+        #logo{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            position: absolute;
+            top: 10px;
+            left: calc(50% - 50px);
+            border-radius: 50%;
+            transition: all 2s;
+        }
+        /* large tablet */
+        @media screen and (min-width:900px){
+            body{
+                background-color: blue;
+            }
+            #logo{
+                left: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Logo Positioning</h1>
+    <section id="pageheader">
+        <div id="logo">
+            
+        </div>
+    </section>
+</body>
+</html>

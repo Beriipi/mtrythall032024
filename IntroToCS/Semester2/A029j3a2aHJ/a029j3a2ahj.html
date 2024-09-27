@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029j3a2aHJ</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            background-image: url(Images/ocean.jpg);
+            background-attachment: fixed;
+            background-size:cover;
+        }
+        #wrapper{
+            display: flex;
+        }
+        #move{
+            height: 300px;
+            width: 300px;
+            background-color: none;
+            position: relative;
+            left: -350px;
+        }
+        #sub{
+            height: 230px;
+            width: 300px;
+            background-image: url(Images/sub.png);
+            position:absolute;
+        }
+        .animatesub{
+            animation-name: move;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+        @keyframes move{
+            from{
+                transform: translate(-350px );
+            }
+            to{
+                transform: translate(2400px );
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A029j3a2aHJ</h1>
+    <div id="wrapper">
+        <div id="move">
+            <div id="sub"></div>
+        </div>
+    </div>
+    <button onclick="addClass()">Toggle Animation</button>
+    <script>
+        let move = window.document.querySelector("#move");
+        function addClass(){
+            move.classList.toggle('animatesub');
+        }
+    </script>
+</body>
+</html>

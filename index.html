@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aiden Trythall Portfolio</title>
+    <style>
+        :root{
+            --color-primary: #f8f8f8;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        iframe{
+            max-width: 75rem;
+        }
+        body{
+            background-image: url(Images/ghibli/background.jpg);
+            background-attachment: fixed;
+            background-size:cover;
+            background-color: #5AD0D3;
+        }
+        #space{
+            background-color: none;
+            width: 100%;
+            height: 50px;
+        }
+        .container{
+            background-color: var(--color-primary);
+            min-height: 10rem;
+            margin: auto;
+            max-width: 75rem;
+            padding: 5px;
+            color: black;
+        }
+        #pageheader{
+            min-height: 250px;
+            background-color: #A0ADC1;
+            padding: 1rem;
+            position: relative;
+            border-radius: 1.5rem 1.5rem 0 0;
+            border: 4px solid var(--color-primary);
+            background-image: url(Images/ghibli/header.jpg);
+            background-position: center center;
+            background-size: cover;
+            transition: all 2s;
+        }
+        #logo{
+            height: 100px;
+            width: 100px;
+            background-color: none;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - (50px));
+            background-image: url(Images/IndexLogo/logo.png);
+            background-position: center center;
+            background-size: cover;
+            border: 2px solid black;
+            border-radius: 50%;
+            transition: all 2s;
+        }
+        blockquote{
+            text-align: center;
+            margin: auto;
+            font-size: 24px;
+            font-weight: bolder;
+            color: var(--color-primary);
+            text-shadow: 2px 2px 2px #D4ECC0;
+            padding-top: 40px;
+        }
+        #quote{
+            background-color: none;
+            color: var(--color-primary);
+            text-align: right;
+            text-shadow: 1px 1px 1px #D4ECC0;
+            width: 80%;
+            margin: auto;
+        }
+        #pagenav{
+            background-color: var(--color-primary);
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            color: #A0ADC1;
+        }
+        #pagenav>a{
+            color: #A0ADC1;
+        }
+        #pagenav>a:hover{
+            color: slategray;
+        }
+        #media{
+            min-height: 200px;
+            background-color: #89A75D;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+        }
+        iframe{
+            width: 80%;
+            aspect-ratio: 16/9;
+            margin: auto;
+            display: block;
+        }
+        #career{
+            min-height: 200px;
+            background-color: #296997;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+        }
+        #career .container{
+            background-image: url(Images/ghibli/career.gif);
+            background-position: center center;
+            background-size: cover;
+            min-height: 300px;
+            color: var(--color-primary);
+            transition: all 2s;
+        }
+        #pagecontent{
+            min-height: 200px;
+            background-color: #70CEE8;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+        }
+        #pagecontent .container{
+            color: slategray;
+        }
+        #pagecontent .container h1{
+            text-align: center;
+        }
+        #ponyo{
+            max-height: 300px;
+            max-width: 80%;
+            aspect-ratio: 16/9;
+            margin: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+        #semesters{
+            min-height: 200px;
+            background-color: black;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+        }
+        #flexbox1{
+            display: flex;
+        }
+        #semester1{
+            background-color: var(--color-primary);
+            width: 50%;
+            min-height: 1000px;
+            background-image: url(Images/ghibli/semester1tall.jpg);
+            background-position: center center;
+            color: var(--color-primary);
+        }
+        #semester2{
+            background-color: var(--color-primary);
+            width: 50%;
+            min-height: 1000px;
+            background-image: url(Images/ghibli/semester2tall.jpg);
+            background-position: center center;
+            color: var(--color-primary);
+        }
+        #semesterlist{
+            padding: 1rem;
+        }
+        #pagefooter{
+            min-height: 200px;
+            background-color: #10627A;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+            text-align:center;
+        }
+        #pagefooter .container{
+            min-height: 264px;
+            background-image: url(Images/ghibli/pagefooter.gif);
+            background-position: center center;
+            background-size: cover;
+            color: var(--color-primary);
+            transition: all 2s;
+        }
+        
+        #subfooter{
+            min-height: 150px;
+            background-color: lightpink;
+            padding: 1rem;
+            border: 4px solid var(--color-primary);
+            border-radius: 0 0 1.5rem 1.5rem;
+            background-image: url(Images/ghibli/subfooter.jpg);
+            background-position: center center;
+            background-size: cover;
+            color: var(--color-primary);
+            text-align: center;
+            position: relative;
+            transition: all 2s;
+        }
+        /* Footer links */
+        #footerlinks>a{
+            color: var(--color-primary);
+        }
+        #footerlinks>a:hover{
+            color:#43bfe4;
+        }
+        #subfooterlinks>a{
+            color: var(--color-primary);
+        }
+        #subfooterlinks>a:hover{
+            color: rgb(184,181,143);
+        }
+
+        #totoros{
+            height: 150px;
+            width: 150px;
+            background-image: url(Images/ghibli/totoros.png);
+            background-color: none;
+            position: absolute;
+            top: 50px;
+            right: 25px;
+            background-position: center center;
+        background-size: cover;
+        transition: all 2s;
+        }
+        #totoros:hover{
+            transform: rotate(-5deg)
+        }
+        #sootsprites{
+            height: 150px;
+            width: 150px;
+            background-image: url(Images/ghibli/sootsprites.png);
+            background-color: none;
+            position: absolute;
+            top: 50px;
+            left: 35px;
+            background-position: center center;
+        background-size: cover;
+        transition: all 2s;
+        }
+        #sootsprites:hover{
+            transform: rotate(-5deg)
+        }
+
+        /* media queries */
+        @media only screen and (max-width:768px){
+            
+            #logo{
+                left: 30px;
+            }
+            #flexbox1{
+            display: block;
+            }
+            #semester1{
+                background-image: url(Images/ghibli/semester1.jpg);
+                min-height: 500px;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+            #semester2{
+                background-image: url(Images/ghibli/semester2.jpg);
+                min-height: 500px;
+                width: 100%;
+                background-position: center center;
+                background-size: cover;
+            }
+            #sootsprites{
+                top:70px;
+            }
+            #totoros{
+                top:65px;
+            }
+        }
+        @media only screen and (min-width:1050px){
+            #pageheader{
+                min-height: 450px;
+            }
+            #career{
+                background-color: #095559;
+            }
+            #career .container{
+                min-height: 550px;
+                background-image: url(Images/ghibli/career2.gif);
+            }
+            #pagefooter{
+                background-color: #211117;
+            }
+            #pagefooter .container{
+                min-height: 600px;
+                background-image: url(Images/ghibli/pagefooter2.gif);
+            }
+            #sootsprites{
+                left: 200px;
+                top: 75px;
+            }
+            #totoros{
+                right: 200px;
+                top: 75px;
+            }
+            #semester1{
+                background-image: url(Images/ghibli/semester1wide.jpg);
+                background-position: center center;
+                background-size: cover;
+            }
+            #semester2{
+                background-image: url(Images/ghibli/semester2wide.jpg);
+                background-position: center center;
+                background-size: cover;
+            }
+            #footerlinks>a:hover{
+            color:#947B63;
+            }
+            #subfooter{
+                min-height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- (command + /) begin pageheader-->
+        <div id="space"></div>
+    <header id="pageheader">
+        <div id="logo"></div>
+        <blockquote>"I never want to regret not trying something. It's better to try and fail. I believe that."</blockquote>
+        <p id="quote">
+            - Hayao Miyazaki
+        </p>
+        <nav id="pagenav">
+            <a href="#career">Career</a> | 
+            <a href="#semester1">Semester 1</a> | 
+            <a href="#semester2">Semester 2</a>
+        </nav>
+    </header>
+    <!-- end pageheader -->
+
+    <!-- begin media -->
+    <section id="media">
+        <iframe src="https://www.youtube.com/embed/v6Q6y4-qKac?si=lVxfB4XmNL-MJanG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+    <!-- end media -->
+    
+    <!-- begin pagecontent -->
+    <main id="pagecontent">
+        <img id="ponyo" src="Images/ghibli/pagecontent.jpg" alt="ponyo">
+        <div class="container">
+            <h1>Introduction</h1>
+            <h3>Hello, my name is Aiden. I'm a senior at Coalinga highschool. This is my third year taking web design classes, and I am now in Web App Development, meaning if I pass this class I get a cord at graduation! That's pretty exciting. I quite like my classes this year. In my freetime, I enjoy playing videogames, watching anime (especially studio ghibli), and listening to music a lot, and sometimes reading and drawing though those are kind of rare.</h3>
+        </div>
+    </main>
+    <!-- end pagecontent -->
+
+    <!-- begin career -->
+    <section id="career">
+        <div class="container">
+            <h2>Career</h2>
+            <ul>
+                <li>Letter of Introduction</li>
+                <li>Resume</li>
+                <li>References</li>
+                <li>Job Application</li>
+                <li>Career Plan</li>
+                <li>Work Samples</li>
+                <li>Certificats</li>
+            </ul>
+        </div>
+    </section>
+    <!-- end career -->
+
+    <!-- begin semesters -->
+    <section id="semesters">
+        
+        <div class="container">
+            <div id="flexbox1">
+                <div id="semester1">
+                    <h2 id="semesterlist">Semester 1</h2>
+                    <ul>
+                        <li>A001</li>
+                        <li>A002</li>
+                        <li>A003</li>
+                        <li>A004</li>
+                    </ul>
+                </div>
+                <div id="semester2">
+                    <h2 id="semesterlist">Semester 2</h2>
+                    <ul>
+                        <li>A001</li>
+                        <li>A002</li>
+                        <li>A003</li>
+                        <li>A004</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end semesters -->
+
+    <!-- begin pagefooter -->
+    <footer id="pagefooter">
+        <div class="container">
+            <h3 id="footerlinks">
+            <a target="_blank" href="https://www.chsserver01.org/">chagoyan</a> |
+            <a target="_blank" href="https://chsserver01.org/chaggy.net/colortheory/colorscheme2/index-en.html">color schemes</a> |
+            <a target="_blank" href="https://coalingahuron.aeries.net/">aeries</a> |
+            <a target="_blank" href="https://chs.chusd.org/">chs</a> |
+            <a target="_blank" href="https://mycareertech.com/">mychareertech</a> |
+            <a target="_blank" href="https://classroom.google.com/c/NzA0Mzc3NDU4NDA4">classroom</a> |
+            <a target="_blank" href="https://codepip.com/games/">codepip</a> |
+            <a target="_blank" href="https://app.minga.io/home?_ga=2.42973159.357855317.1696525482-370183285.1692728769&_gl=1*t0bjlq*_ga*MzcwMTgzMjg1LjE2OTI3Mjg3Njk.*_ga_KR90T0D2Q4*MTY5NjUyNTQ4Mi40LjEuMTY5NjUyNjAwNi42MC4wLjA.*_gcl_au*OTg0MTI4ODA1LjE2OTI3Mjg3Njk.">minga</a>
+            </h3>
+        </div>
+    </footer>
+    <!-- end pagefooter -->
+
+    <!-- begin subfooter -->
+    <footer id="subfooter">
+        <h3 id="subfooterlinks">
+            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube</a> |
+            <a target="_blank" href="https://www.roblox.com/home">roblox</a> |
+            <a target="_blank" href="https://hianime.to/">h!anime</a>
+        </h3>
+        <p> &copy; Aiden Trythall 2024 - 
+            <script>
+                window.document.write(new Date().getFullYear());
+            </script>
+        </p> 
+        <div id="totoros"></div>
+        <div id="sootsprites"></div>
+    </footer>
+    <!-- end pagefooter -->
+</body>
+</html>

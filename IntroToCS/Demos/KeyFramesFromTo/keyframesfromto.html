@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes: From - To</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            margin-top: 20px;
+        }
+        #one{
+            background-color: blue;
+            animation-name: triangle;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #two{
+            background-color: red;
+            animation-name: sideswoop;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        #three{
+            background-color: orange;
+            animation-name: movespin;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes movespin{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes sideswoop{
+            0%{
+                transform: translate(0px, 0px);
+            }
+            100%{
+                transform: translate(720px, 0px);
+            }
+        }
+        @keyframes triangle{
+            0%{
+                transform: translate(0px, 0px);
+            }
+            33%{
+                transform: translate(350px, 500px);
+            }
+            66%{
+                transform: translate(700px, 0px);
+            }
+            100%{
+                transform: translate(0px, 0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Keyframes: From - To</h1>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+</body>
+</html>

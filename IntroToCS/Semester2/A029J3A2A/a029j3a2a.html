@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029J3A2A</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #one{
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            animation-name: rainbow;
+            animation-duration: 18s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        #two{
+            background-color: pink;
+            height: 200px;
+            width: 200px;
+            animation-name: zoom;
+            animation-duration: 3s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        #three{
+            background-color: white;
+            height: 200px;
+            width: 200px;
+            animation-name: color;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        #four{
+            background-color: brown;
+            height: 200px;
+            width: 200px;
+            animation-name: scale;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes rainbow{
+            0%{
+                background-color: red;
+            }
+            16.6%{
+                background-color: orange;
+            }
+            33.2%{
+                background-color: yellow;
+            }
+            49.8%{
+                background-color: green;
+            }
+            66.4%{
+                background-color: blue;
+            }
+            83%{
+                background-color: purple;
+            }
+            100%{
+                background-color: red;
+            }
+        }
+        @keyframes zoom{
+            from{
+                transform: translate(-40rem, 0rem);
+            }
+            to{
+                transform: translate(150rem,0rem);
+            }
+            }
+        @keyframes color{
+            from{
+                background-color: white;
+            }
+            to{
+                background-color: black;
+            }
+        }
+        @keyframes scale{
+            from{
+                transform: scale(1);
+            }
+            to{
+                transform: scale(.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A029J3A2A</h1>
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A029j3a2aH</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+            text-align: center;
+            background-image: url(Images/space.jpg);
+            background-attachment: fixed;
+            background-size:cover;
+            
+        }
+        #star{
+            height: 350px;
+            width: 350px;
+            background-color: none;
+            margin: auto;
+            background-image: url(Images/stage1.png);
+            animation-timing-function: linear;
+        }
+        #star:hover{
+            animation-name: explode;
+            animation-duration: 5s;
+            
+        }
+        @keyframes explode{
+            0%{}
+            33%{
+                background-image: url(Images/stage2.png);
+                height: 350px;
+                width: 350px;
+            }
+            66%{
+                background-image: url(Images/stage3.png);
+            }
+            100%{
+                background-image: url(Images/stage4.png);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>A029j3a2aH</h1>
+    <div id="star"></div>
+</body>
+</html>

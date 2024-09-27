@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas - CHS Web</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        #wrapper{
+            border: 5px solid white;
+            margin: auto;
+            width: 90%;
+            display: grid;
+            grid-template-areas:
+            "ph ph ph ph ph"
+            "pl pl pl pl pl"
+            "sl sl sl sl sl"
+            ". pa st bo ."
+            "mi mi mi mi mi"
+            "en en en en en"
+            ". ne ca tw ."
+            "sm sm sm sm sm"
+            "co co co co co";
+            column-gap: 10px;
+        }
+
+        #pageheader{padding: 1rem; background-color: red; grid-area: ph; min-height: 100px;}
+        #pagelinks{padding: 1rem; background-color: orangered; grid-area: pl;}
+        #slideshow{padding: 1rem; background-color: orange; grid-area: sl; min-height: 200px;}
+        #parents{padding: 1rem; background-color:yellow; grid-area: pa; min-height: 70px;}
+        #students{padding: 1rem; background-color: yellowgreen; grid-area: st; min-height: 70px;}
+        #board{padding: 1rem; background-color: lime; grid-area: bo; min-height: 70px;}
+        #mission{padding: 1rem; background-color: aqua; grid-area: mi; min-height: 100px;}
+        #engage{padding: 1rem; background-color: blue; grid-area: en; min-height: 100px;}
+        #news{padding: 1rem; background-color: darkblue; grid-area: ne; min-height: 70px;}
+        #calendar{padding: 1rem; background-color: blueviolet; grid-area: ca; min-height: 70px;}
+        #twitter{padding: 1rem; background-color: purple; grid-area: tw; min-height: 70px;}
+        #socialmedia{padding: 1rem; background-color: violet; grid-area: sm; min-height: 100px;}
+        #contact{padding: 1rem; background-color: pink; grid-area: co; min-height: 100px;}
+    </style>
+</head>
+<body>
+<div id="wrapper">
+        <header id="pageheader">#pageheader</header>
+        <nav id="pagelinks">#pagelinks</nav>
+        <div id="slideshow">slideshow</div>
+        <section id="parents">#parents</section>
+        <section id="students">#students</section>
+    
+        <section id="board">#board</section>
+        <section id="mission">#mission</section>
+        <section id="engage">#engage</section>
+    
+        <section id="news">#news</section>
+        <section id="calendar">#calendar</section>
+        <section id="twitter">#twitter</section>
+    
+        <footer id="socialmedia">#socialmedia</footer>
+        <footer id="contact">#contact</footer>
+</div>
+
+</body>
+</html>

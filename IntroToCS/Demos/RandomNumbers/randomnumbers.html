@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Numbers</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Numbers</h1>
+    <script>
+        //create variable for random number
+        let randomNumber;
+        randomNumber = 3.141592653;
+
+        //the math object
+        //math.floor removes decimals
+
+        //math.random returns a random number between 0 and 1 (but its more like just less than 1) unless multiplying it by something (like in line 28, but if you add +1 then it can give you the max as well)
+        //randomNumber = Math.random();
+
+        //create random numbers in a range
+        randomNumber = Math.floor(Math.random() * 100 +1) ;
+
+        //display random number
+        window.document.write(randomNumber);
+    </script>
+</body>
+</html>

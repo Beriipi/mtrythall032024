@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        *{
+            background-color: black;
+            box-shadow: 5px 5px 5px white;
+            color: gray;
+        }
+        h2{
+
+        }
+        #uno{border: 1px solid red;
+            padding: 30px;
+            width: 150px;
+            box-sizing: content-box;
+        }
+        #dos{border: 1px solid red;
+            padding: 30px;
+            width: 150px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    <h2 id="uno">Uno</h2>
+    <h2 id="dos">Dos</h2>
+    <h2 id="tres">Tres</h2>
+    <h2 id="quatro">Quatro</h2>
+</body>
+</html>

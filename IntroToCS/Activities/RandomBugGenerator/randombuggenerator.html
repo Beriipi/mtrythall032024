@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Bug Generator</title>
+    <style>
+        body{
+            background-image: url(Images/dirt.jpg);
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Bug Generator</h1>
+    <img src="Images/littlebug.gif" alt="littlebug">
+    
+    <script>
+        //create variables
+        let bugCount;
+        let bugLimit;
+
+        //assign values to variables
+        bugCount = 1;
+        bugLimit = Math.floor((Math.random() * 10) +1);
+
+        //window.alert(bugLimit);
+        
+        //create while loops to generate a random numver of bugs
+        while(bugCount <= bugLimit){
+            window.document.write('<img src="Images/littlebug.gif" alt="littlebug">');
+            bugCount++;
+        }
+        let beeCount;
+        let beeLimit;
+
+        //assign values to variables
+        beeCount = 1;
+        beeLimit = Math.floor((Math.random() * 10) +1);
+
+        //window.alert(bugLimit);
+        
+        //create while loops to generate a random numver of bugs
+        while(beeCount <= beeLimit){
+            window.document.write('<img src="Images/bee.gif" alt="bee">');
+            beeCount++;
+        }
+    </script>
+    <img src="Images/bee.gif" alt="bee">
+</body>
+</html>

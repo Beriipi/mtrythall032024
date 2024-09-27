@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO - Grid Areas 1</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        #container{
+            max-width: 700px;
+            height: fit-content;
+            margin: auto;
+            background-color: purple;
+            padding: 2rem;
+        }
+        #wrapper{
+            max-width:100%;
+            margin: auto;
+            color: black;
+            display:grid;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "media media media"
+            "main main aside"
+            "card001 card002 card003"
+            "footer footer footer"
+            "details details details"
+            ;
+            background-color: green;
+            gap: 10px;
+        }
+        header{
+            background-color: orange;
+            grid-area: header;
+            min-height: 150px;
+            padding: 1rem;
+        }
+        nav{
+            background-color: aqua;
+            grid-area: nav;
+            height: 75px;
+            padding: 1rem;
+        }
+        #media{
+            background-color: lime;
+            grid-area: media;
+            min-height: 300px;
+            padding: 1rem;
+        }
+        main{
+            background-color: white;
+            grid-area: main;
+            min-height: 400px;
+            padding: 1rem;
+        }
+        aside{
+            background-color: teal;
+            grid-area: aside;
+            color: silver;
+            min-height: 400px;
+            padding: 1rem;
+        }
+        #card001{
+            background-color: coral;
+            grid-area: card001;
+            min-height: 200px;
+            padding: 1rem;
+        }
+        #card002{
+            background-color: lightblue;
+            grid-area: card002;
+            min-height: 200px;
+            padding: 1rem;
+        }
+        #card003{
+            background-color: lightgreen;
+            grid-area: card003;
+            min-height: 200px;
+            padding: 1rem;
+        }
+        #pagefooter{
+            background-color: gold;
+            grid-area: footer;
+            min-height: 65px;
+            padding: 1rem;
+        }
+        #pagedetails{
+            background-color: silver;
+            grid-area: details;
+            height: 200px;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Areas 1</h1>
+    <div id="container">
+        <div id="wrapper">
+            <header>header</header>
+            <nav>pagenav</nav>
+            <div id="media">media</div>
+            <main>main</main>
+            <aside>aside</aside>
+            <section id="card001">001</section>
+            <section id="card002">002</section>
+            <section id="card003">003</section>
+            <footer id="pagefooter">pagefooter</footer>
+            <footer id="pagedetails">pagedetails</footer>
+        </div>
+        
+    </div>
+</body>
+</html>

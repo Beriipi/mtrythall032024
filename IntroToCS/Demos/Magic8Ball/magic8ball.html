@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body {
+            background-color: #000;
+            animation-name: backgroundshift;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            }
+
+        @keyframes backgroundshift {
+            0% {
+            background-color: #000000;
+            }
+            100% {
+            background-color: #333333;
+            }
+        }
+
+        .chakra-petch-regular {
+            font-family: "Chakra Petch", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 1rem;
+            border: 4px solid white;
+            }
+            #outercircle {
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            margin-top: 100px;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            box-shadow: 3px 3px 10px 10px white;
+            cursor: pointer;
+            transition: 2s;
+        }
+
+        #outercircle:hover {
+            box-shadow: 4px 4px 35px 10px white;
+        }
+
+        .shake {
+            animation-name: shake;
+            animation-duration: 0.15s;
+            animation-iteration-count: 25;
+        }
+
+        #innercircle {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+        #eight {
+            text-align: center;
+            font-size: 8rem;
+        }
+
+        @keyframes shake {
+            from {
+                margin-top: 0px;
+            }
+            to {
+                margin-top: 50px;
+            }
+        }
+        #messagedisplay {
+            background-color: none;
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            background-image: url(Images/bluetriangle.png);
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            color: white;
+            opacity: 0;
+            transition: all 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #messagedisplay p{
+            background-color: none;
+            width: 100px;
+            text-align: center;
+            padding-bottom: 60px;
+            font-family: 'Courier New', Courier, monospace;
+            text-size-adjust: 20px;
+        }
+</style>
+</head>
+<body>
+<h1 class="chakra-petch-regular">Magic 8 Ball</h1>
+
+<div id="outercircle">
+<div id="innercircle">
+<h2 id="eight" class="chakra-petch-regular">8</h2>
+</div>
+<div id="messagedisplay"></div>
+</div>
+
+<script>
+    // Create a variable for the magic8ball #outercircle
+        const ball = window.document.querySelector("#outercircle");
+
+    // Create variable for ball elements
+        let innerCircle;
+        let eight;
+        let messageDisplay;
+
+    // Assign elements to variables
+        innerCircle = window.document.querySelector("#innercircle");
+        eight = window.document.querySelector("#eight");
+        messageDisplay = window.document.querySelector("#messagedisplay");
+
+    // Add a click event listener to the ball
+        ball.addEventListener("click", shakeBall);
+
+    // The function
+    function shakeBall() {
+    // window.alert("working!");
+        ball.classList.add("shake");
+        //hide the message display
+        messageDisplay.style.opacity = "0";
+        eight.style.display = "none";
+        innerCircle.style.backgroundColor = "#333";
+        innerCircle.style.border = "4px double silver";
+
+    // Set timer to remove shake class from ball
+        window.setTimeout(function () {
+            ball.classList.remove("shake");
+            }, 1000);
+        //display message
+    window.setTimeout(updateMessage, 2500);
+    }
+    function updateMessage(){
+        messageDisplay.style.opacity = "1";
+        // create messages to display
+        let msg = [];
+        msg[0] = "<p>It is certain</p>";
+        msg[1] = "<p>It is decididly so</p>";
+        msg[2] = "<p>Without a doubt</p>";
+        msg[3] = "<p>Yes definitely</p>";
+        msg[4] = "<p>You may rely on it</p>";
+        msg[5] = "<p>As I see it, yes</p>";
+        msg[6] = "<p>Most likely</p>";
+        msg[7] = "<p>Outlook good</p>";
+        msg[8] = "<p>Yes</p>";
+        msg[9] = "<p>Signs point to yes</p>";
+        msg[10] = "<p>Reply hazy, try again</p>";
+        msg[11] = "<p>Ask again later</p>";
+        msg[12] = "<p>Better not tell you now</p>";
+        msg[13] = "<p>Cannot predict now</p>";
+        msg[14] = "<p>Concentrate and ask again</p>";
+        msg[15] = "<p>Don't count on it</p>";
+        msg[16] = "<p>My reply is no</p>";
+        msg[17] = "<p>My sources say no</p>";
+        msg[18] = "<p>Outlook not so good</p>";
+        msg[19] = "<p>Very doubtful</p>";
+
+        //window.alert(msg.length);
+
+        //generate random number for a random message
+        let randomNum;
+        randomNum = Math.floor(Math.random() * msg.length);
+        //window.alert(msg[randomNum]);
+        //display the random message
+        messageDisplay.innerHTML = msg[randomNum];
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+    <style>
+        body{
+            background-color: black;
+            color: whitesmoke;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        h1,h2{background-color: rgb(20, 20, 20);
+        border: 1px solid whitesmoke;
+        padding: .5rem;
+        text-align: center;
+    }
+        h3{background-color: rgb(40, 40, 40);
+        border: 1px solid whitesmoke;
+        padding: .5rem;
+        text-align: center;
+    }
+    img{
+        border: 5px solid whitesmoke;
+        margin: auto;
+        max-width: 90%;
+        min-width: 20rem;
+        margin: auto;
+        display: block;
+        border-radius: 15%;
+    }
+    #green{
+        border: 5px solid rgb(0, 71, 0);
+    }
+    #blue{
+        border: 5px solid rgb(0, 101, 129);
+    }
+    #pink{
+        border: 5px solid rgb(139, 66, 62);
+    }
+    #orange{
+        border: 5px solid #F43904;
+    }
+    #light{
+        border: 5px solid #FED966;
+    }
+    </style>
+</head>
+<body>
+    <h1>Responsive Web Design</h1>
+
+    <img id="green" src="Images/responsivewebdesign.gif" alt="image one">
+    
+    <p>There are different approaches to creating responsive web pages.  One approach is called mobile first.  When designing mobile first, you focus on sketching and prototyping the smallest screen first and work your way up to desktop designs.  In mobile first design, the focus is in designing for a phone, then tablets, then desktop computers.  In reality, we design for any screen size along the way.</p>
+    
+    <h2>Components of Responsive Web Design</h2>
+    
+    <h3>Media Queries</h3>
+    
+    <img id="blue" src="Images/mediaqueries.png" alt="image two">
+    
+    <p>Media queries are a fairly new technology in Web Page Design.  They were introduced with CSS3.  With media queries, you can create different layouts based on the size of the viewport (browser window).  Media queries only apply styles when certain conditions are met.  Normally the conditions are the minimum or maximum width of the viewport.  </p>
+    
+    <h3>Responsive Images</h3>
+    
+    <img id="pink" src="Images/responsiveimages.jpeg" alt="image three">
+    
+    <p>Since we are designing for multiple screen sizes, it is a good idea to provide images based on the size of the viewport.  We can easily use the width or max-width property to make an image responsive based on the size of the viewport.  In addition, we can now use the new picture element to load different images based on the size of the viewport.</p>
+    
+    
+    <h3>Responsive Typography</h3>
+    
+    <img id="orange" src="Images/responsivetypography.jpg" alt="image four">
+    
+    <p>Responsive typography adjusts the font size of your text based on the size of the viewport.  Phones and tables have smaller viewports and therefore should, in many cases, have smaller font sizes.  We will use the rem unit to create relative font-sizes based on viewport size. </p> 
+    
+    <h3>CSS Grid</h3>
+    
+    <img src="Images/cssgrid.png" alt="image five">
+    
+    <p>CSS Grid is a two-dimensional layout system for creating web pages.  It allows you to specify the number of columns and rows in your design.  More importantly it is well suited for responsive design because it automatically adapts to the size of the viewport.  When combined with media queries, it is a powerful and efficient way to create responsive designs.</p>
+    
+    <h3>Flexbox</h3>
+    
+    <img id="light" src="Images/flexbox.png" alt="image six">
+    
+    <p>Flexbox is a one-dimensional layout system for creating web pages.  You can chose to layout your flex items horizontally or vertically.  More importantly, it allows you to easily create responsive layouts that can easily be adjusted with media queries.  It is often used in basic layout designs.</p>
+</body>
+</html>

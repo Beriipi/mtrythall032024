@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFB001</title>
+</head>
+<style>
+body{background-color: white;}
+#wrapper{max-width: 1024px;
+        margin: auto;}
+div{background-color: lightblue;
+    min-height: 100px;}
+#flexbox{display: flex;
+        min-height:300px;}
+#pageheader{background-color:pink;
+            min-height: 150px;}
+#sidenav{flex-basis: 25%;
+        background-color: cornsilk;}
+#main{flex-basis: 50%;
+background-color: lightgoldenrodyellow;}
+#sideaside{flex-basis: 25%;
+        background-color:cornsilk;}
+#pagefooter{min-height: 100px;}
+</style>
+<body>
+    <div id="wrapper">
+        <div id="pageheader">#pageheader</div>
+<div id="flexbox">
+            <div id="sidenav">#sidenav</div>
+            <div id="main">Main</div>
+            <div id="sideaside">#sideaside</div>
+</div>
+    <div id="pagefooter">#pagefooter</div>
+    </div>
+</body>
+</html>

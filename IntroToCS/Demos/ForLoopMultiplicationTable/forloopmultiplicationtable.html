@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop Multiplication Table</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        table,th,td{
+            border: 1px solid white;
+            padding: 1rem;
+        }
+        th{
+            background-color: rgb(126, 126, 126);
+        }
+        tr:hover{
+            background-color: rgb(126, 126, 126);
+        }
+        td:hover{
+            background-color: #fff;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>For Loop Multiplication Table</h1>
+    <script>
+        //create range variable
+        let range;
+        range = window.prompt('Enter the Multiplication Range:');
+        //setup table
+        window.document.write('<table>');
+        window.document.write('<tr>');
+        window.document.write('<th>x</th>');
+
+        //for loop for horizontal factors (table headers)
+        for( let x = 1 ; x <= range ; x++ ){
+            //code to run
+            document.write('<th>' + x + '</th>');
+        }
+        //end the row
+        document.write('</tr>');
+        for(let i = 1 ; i <= range ; i++ ){
+            document.write('<tr>');
+            document.write('<th>' + i + '</th>');
+            //generate forloop for products
+            for(let z = 1 ; z <= range ; z++ ){
+                document.write('<td>' + z * i + '</td>');
+            }
+        }
+
+        //Java script math operators
+        //window.document.write('Hello World!')
+        console.log('Hello Mundo');
+        console.log(2+2);
+        console.log(5*5);
+        console.log(20/4);
+    </script>
+</body>
+</html>

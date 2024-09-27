@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Mover</title>
+    <style>
+        #mover{
+            height: 100px;
+            width: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="mover"></div>
+
+    <script>
+        //create variable
+        let mover;
+        //assign vanue variable
+        mover = document.querySelector("#mover");
+        let speed;
+        speed = 30;
+        //initial position for mover
+        mover.style.position = "absolute";
+        mover.style.top = "200px";
+        mover.style.left = "100px";
+        //capture keyboard events
+        window.addEventListener('keydown', move);
+        function move()
+        {
+            //mover.style.backgroundColor = "orange";
+            if(event.keyCode == 38)
+            {
+                //up
+                mover.style.backgroundColor = "yellow";
+                mover.style.top = parseInt(mover.style.top) - speed + "px";
+            }
+            if(event.keyCode == 39)
+            {
+                //right
+                mover.style.backgroundColor = "green";
+                mover.style.left = parseInt(mover.style.left) + speed + "px";
+            }
+            if(event.keyCode == 40)
+            {
+                //down
+                mover.style.backgroundColor = "blue";
+                mover.style.top = parseInt(mover.style.top) + speed + "px";
+            }
+            if(event.keyCode == 37)
+            {
+                //left
+                mover.style.backgroundColor = "purple";
+                mover.style.left = parseInt(mover.style.left) - speed + "px";
+            }
+        }
+    </script>
+</body>
+</html>

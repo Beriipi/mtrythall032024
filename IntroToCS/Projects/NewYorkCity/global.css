@@ -1,0 +1,265 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    background-image: url(Images/bodybackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header{
+    background-color: #141A2C;
+    min-height: 100px;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: none;
+}
+#logo{
+    background-color: #141A2C;
+    
+}
+#logo img{
+    display: block;
+    margin: auto;
+    
+}
+
+header h1{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+#wrapper{
+    background-color: blue;
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+}
+#topnav{
+    background-color: #141A2C;
+    min-height: 150px;
+    padding: 1rem;
+    display: none;
+}
+#topnav ul{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+#topnav ul li{
+    background-color: none;
+    border: 1px solid silver;
+    padding: 1rem;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+#topnav ul li:hover{
+    background-color: #333;
+}
+#media{
+    background-color: green;
+    min-height: 300px;
+    padding: 1rem;
+    background-image: url(Images/media.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    border: 3px solid white;
+}
+main{
+    background-color: white;
+    min-height: 300px;
+    padding: 1.5rem;
+    color: #333;
+    line-height: 1.5;
+
+}
+main h2{
+    text-align: center;
+    transition: all 1s;
+}
+main img{
+    max-width: 90%;
+    height: auto;
+    aspect-ratio:4/3 ;
+    display: block;
+    margin:auto;
+}
+#cards{
+    background-color: black;
+    min-height: 150px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+article{
+    background-color: white;
+    min-height: 150px;
+    padding: 1rem;
+    color: #333;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+}
+#cards article{
+    background-color: red;
+    background-position: center center;
+    background-size: cover;
+    max-width: 400px;
+    aspect-ratio: 400/300;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+#cards article h3{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: .5rem;
+    border: 2px solid silver;
+    text-align: center;
+    border-radius: 10px;
+    text-transform: uppercase;
+    flex: 1;
+    transition: all 2s;
+}
+#bronx{
+    background-image: url(Images/bronxcard.jpg);
+}
+#manhattan{
+    background-image: url(Images/manhattancard.jpg);
+}
+#queens{
+    background-image: url(Images/queenscard.jpg);
+}
+#staten{
+    background-image: url(Images/statencard.jpg);
+}
+#brooklyn{
+    background-image: url(Images/brooklyncard.jpg);
+}
+footer{
+    background-color: black;
+    min-height: 50px;
+    padding: 1rem;
+    text-align: center;
+}
+#logodesktop{
+    display: none;
+}
+nav ul li a, #cards article h3 a{
+    color: white;
+    background-color: none;
+}
+
+/* Desktop styles (command /) */
+@media screen and (min-width: 895px){
+    div#media{
+        border: none;
+    }
+    #topnav ul{
+        flex-direction: row;
+    }
+    #topnav{
+        min-height: 50px;
+        position: sticky;
+        top: 130px;
+        display: block;
+    }
+    #topnav ul li{
+        border:none;
+        padding: 0rem;
+        
+    }
+    #topnav ul li:hover{
+        background-color: black;
+    }
+    header{
+        display: block;
+        min-height: 80px;
+        padding-top:50px;
+    }
+    #logo{
+        display: none;
+    }
+    
+    #wrapper{
+        margin-top: 250px;
+    }
+    #logodesktop{
+        display: block;
+        position: absolute;
+        top: -190px;
+        left: 0;
+    }
+    #logodesktop:hover{
+        top: 5-0px;
+        transition: all 2s;
+    }
+    
+    main h2{
+        text-align: left;
+    }
+    main video{
+        display:block;
+    }
+    #cards article h3:hover{
+    transform: rotate(3deg);
+}
+}
+
+#menu{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+div#modalmenu{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+img#closex{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: none;
+}
+#modalheader{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 1px solid silver;
+}
+nav#modalnav{
+    line-height: 2;
+    padding:  1rem;
+    padding-top: 150px;
+    text-align: center;
+}
+#modalheader h1{
+    text-align: center;
+}

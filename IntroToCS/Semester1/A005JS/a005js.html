@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A005JS</title>
+    <style>
+        span.comment{
+            color: green;
+        }
+        span.tag{
+            color: darkorange;
+        }
+        pre{
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Changing Properties</h1>
+    <h2>A005JS</h2>
+<p>As previously noted, JavaScript is a scripting language that uses objects. For example, your browser window is an object, which contains the document object. The document object, in turn, contains the body object, which includes the style object.</p>
+
+<p>We can refer to these objects via JavaScript by using dot notation. For example, "window.document.body.style"</p>
+
+<p>Using dot notation, we can access objects and change their properties.</p>
+
+<p>The following dot notation reference can change two properties of the body.style object. We use window.document.body.style to access that object. These properties are referenced with the following code:</p>
+
+<p>
+    window.document.body.style.backgroundColor - This property is the background color of the body. <br>
+    window.document.body.style.color - This property is the text color of the body.
+</p>
+
+<p>Here, we change the window.document.body.style. properties as follows:</p>
+
+<script>
+    //change the style object properties
+
+    //change the background color
+    window.document.body.style.backgroundColor = 'black';
+
+    //change the text color
+    window.document.body.style.color = 'white';
+</script>
+</body>
+
+<pre>
+<code>
+    <span class="tag">&lt;script&gt;</span>
+        <span class="comment">
+        // Change the style object properties
+        </span>
+        <span class="comment">// Change the background color</span>
+        window.document.body.style.backgroundColor = 'black';
+
+        <span class="comment">//change the text color</span>
+        window.document.body.style.color = 'white';
+        
+    <span class="tag">&lt;/script&gt;</span>
+</code>
+</pre>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A030CAS - Custom Animated Scene</title>
+    <style>
+
+        html{
+            color: white;
+            background-image: url(images/road.jpeg);
+            background-size: cover;
+            background-position: fixed;
+            background-repeat: no-repeat;
+            height: 100%;}
+        #red{width: 500px;
+            height: 200px;
+            background-image: url(images/red-car.png); 
+            background-size: contain;
+            background-color: none;
+            margin-top: 400px;}
+        #container1{width: 550px;
+            height: 250px;
+            background-color: none;
+            animation-name: red;
+            animation-duration: 4s;
+            animation-iteration-count:infinite;}
+        @keyframes red{
+            from{transform: translate(200rem, 4rem);}
+            to{transform: translate(-200rem, 4rem);}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Custom Animated Scene</h1>
+    <div id="container1">
+        <div id="red"></div>
+    <div\>
+</body>
+</html>

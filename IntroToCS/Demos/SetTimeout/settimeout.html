@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Timeout</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Set Timeout</h1>
+    <script>
+        //use set timeout to count seconds before running a function
+        //two arguements - the function and the miliseconds
+        setTimeout(displayAlert, 5000);
+        //use setInterval instead of setTimeout to repeat every 5000 milliseconds (5 seconds)
+        function displayAlert(){
+            window.alert("hello");
+        }
+    </script>
+</body>
+</html>
