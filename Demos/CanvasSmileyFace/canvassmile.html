@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Smile Activity</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        body{
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Smiley Face</h1>
+    <canvas id="canvas"></canvas>
+    <script>
+        // Create canvas for 2d drawing
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = 400;
+        canvas.height = 400;
+        canvas.style.border = '2px solid white';
+        canvas.style.margin = 'auto';
+        canvas.style.display = 'block';
+
+        ctx.strokeStyle = 'yellow';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "yellow";
+        ctx.beginPath();
+        ctx.arc(200, 200, 150, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(150, 150, 15, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(250, 150, 15, 0, Math.PI * 2);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'black';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc(200, 210, 100, 0, Math.PI * 1);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.strokeStyle = 'white';
+        ctx.lineWidth = 1;
+        ctx.fillStyle = "white";
+        ctx.beginPath();
+        ctx.arc(200, 218, 80, 0, Math.PI * 1);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+    </script>
+</body>
+</html>
