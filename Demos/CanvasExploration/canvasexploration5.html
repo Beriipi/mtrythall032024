@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Exploration</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        h1{
+            text-align: center;
+        }
+        #canvas{
+            border: 2px solid white;
+            margin: auto;
+            display: block;
+        }
+        #buttonholder{
+            background-color: silver;
+            width: 300px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            margin: .5rem;
+            padding: .5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Canvas Exploration 4</h1>
+    <canvas id="canvas"></canvas>
+    <div id="buttonholder">
+        <button id="createline">Create Line</button>
+        <button id="createrectangle">Create Rectangle</button>
+        <button id="createtriangle">Create Triangle</button>
+        <button id="createarc">Create Arc</button>
+        <button id="createstar">Create Star</button>
+        <button id="undo">Undo</button>
+    </div>
+
+    <script>
+        // Create the variables
+        const canvas = window.document.querySelector('#canvas');
+        //alert(canvas);
+        
+        // Give canvas drawing powers
+        const ctx = canvas.getContext("2d");
+
+        // Configure Canvas
+        canvas.width = 400;
+        canvas.height = 400;
+        canvas.style.backgroundColor = 'gray';
+
+        // Add event listeners
+        // Create variable for buttons
+        // Create line
+        const btnCreateLine = window.document.querySelector('#createline');
+        btnCreateLine.style.backgroundColor = 'red';
+        btnCreateLine.addEventListener('click', function()
+        {//window.alert('CreateLine')
+        //select stroke/line style (color)
+        ctx.strokeStyle = "red";
+        ctx.lineWidth = 15;
+        ctx.lineCap = "round"; // butt round square
+        ctx.lineJoin = "round"; // bevel(flat) or miter(pointed)
+        
+        // draw line
+        ctx.beginPath();
+        ctx.moveTo(15, 15);
+        ctx.lineTo(200, 200);
+        ctx.lineTo(15, 385);
+        ctx.stroke();
+        }
+    );
+
+
+        // Create Rectangle
+        const btnCreateRectangle = window.document.querySelector('#createrectangle');
+        btnCreateRectangle.style.backgroundColor = 'orange';
+        btnCreateRectangle.addEventListener('click', function()
+        {//window.alert('CreateRectangle')
+        ctx.strokeStyle = "orange";
+        ctx.lineWidth = 50;
+        ctx.lineCap = "square";
+        ctx.lineJoin = "square";
+
+        ctx.beginPath();
+        ctx.rect(100, 250, 50, 100)
+        ctx.stroke();
+        }
+    );
+        // Create Triangle
+        const btnCreateTriangle = window.document.querySelector('#createtriangle');
+        btnCreateTriangle.style.backgroundColor = 'yellow';
+        btnCreateTriangle.addEventListener('click', function()
+        {//window.alert('CreateTriangle')
+            ctx.strokeStyle = "yellow";
+            ctx.fillStyle = "lime";
+            ctx.lineWidth = 10;
+            ctx.lineCap = "round";
+            ctx.lineJoin = "miter";
+
+            ctx.beginPath();
+            ctx.moveTo(200, 200);
+            ctx.lineTo(10, 200);
+            ctx.lineTo(200, 10);
+            ctx.lineTo(390, 200);
+            //ctx.lineTo(200, 200);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+        }
+    );
+        // Create Arc
+        const btnCreateArc = window.document.querySelector('#createarc');
+        btnCreateArc.style.backgroundColor = 'green';
+        btnCreateArc.addEventListener('click', function()
+        {//window.alert('CreateArc')
+        ctx.strokeStyle = "green";
+        ctx.fillStyle = "clear";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "square";
+
+        ctx.beginPath();
+        ctx.arc(200, 50, 100, 0, 1 * Math.PI);
+        ctx.stroke();
+        }
+    );
+        // Create Star
+        const btnCreateStar = window.document.querySelector('#createstar');
+        btnCreateStar.style.backgroundColor = 'blue';
+        btnCreateStar.addEventListener('click', function()
+        {//window.alert('CreateStar')
+            ctx.strokeStyle = "blue";
+            ctx.fillStyle = "yellow";
+            ctx.lineWidth = 10;
+            ctx.lineCap = "round";
+            ctx.lineJoin = "miter";
+            
+            ctx.beginPath();
+            ctx.moveTo(200, 200);
+            ctx.lineTo(230, 250);
+            ctx.lineTo(275, 250);
+            ctx.lineTo(250, 300);
+            ctx.lineTo(250, 350);
+            ctx.lineTo(200, 330);
+            ctx.lineTo(150, 350);
+            ctx.lineTo(150, 300);
+            ctx.lineTo(125, 250);
+            ctx.lineTo(175, 250);
+            ctx.closePath();
+            ctx.stroke();
+            ctx.fill();
+        }
+    );
+        // Undo
+        const btnUndo = window.document.querySelector('#undo');
+        btnUndo.style.backgroundColor = 'purple';
+        btnUndo.addEventListener('click', function()
+        {window.alert('Undo')}
+    );
+    </script>
+</body>
+</html>
