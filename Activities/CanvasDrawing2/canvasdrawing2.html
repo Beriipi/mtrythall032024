@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Drawing 2</title>
+    <style>
+    
+    body {
+        margin-top: 50px;
+        color: white;
+        background-color: black;
+    }
+    h1 {
+        text-align: center;
+    }
+    #canvas {
+        margin: auto;
+        display: block;
+        border: 2px solid white;
+        background-color: #4584B3;
+    }
+    </style>
+    </head>
+    <body>
+    <h1>Canvas Drawing 2</h1>
+    <canvas id="canvas" width="1000px" height="500px"></canvas>
+
+    <script>
+      // Create variables
+        const canvas = window.document.querySelector('#canvas');
+        const ctx = canvas.getContext('2d');
+
+        //background
+        ctx.fillStyle = "#4584B3";
+        ctx.strokeStyle = "#3B709A";
+        ctx.lineWidth = 25;
+        ctx.lineCap = "butt";
+        ctx.lineJoin = "milter";
+        ctx.beginPath();
+        ctx.rect(0, 275, 10000, 1000);
+        ctx.stroke()
+        ctx.fill();
+
+        //shadow left circle
+        ctx.fillStyle = "#3B709A";
+        ctx.strokeStyle = "#3B709A";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(445, 335, 35, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //shadow right circle
+        ctx.fillStyle = "#3B709A";
+        ctx.strokeStyle = "#3B709A";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(570, 335, 35, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //rest of shadow
+        ctx.fillStyle = "#3B709A";
+        ctx.strokeStyle = "#3B709A";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.rect(450, 300, 125, 70);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+
+        //left ear
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(465, 210);
+        ctx.lineTo(430, 175);
+        ctx.lineTo(430, 230);
+        ctx.stroke();
+        ctx.fill();
+
+
+        //right ear
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(490, 230);
+        ctx.lineTo(485, 175);
+        ctx.lineTo(445, 210);
+        ctx.stroke();
+        ctx.fill();
+
+        //head
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(455, 225, 35, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //ear shadow left
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(460, 235, 50, 4.06, 4.38);
+        ctx.stroke();
+        ctx.closePath();
+
+        //inside ear right
+        ctx.fillStyle = "#CBCDCF";
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(487, 205);
+        ctx.lineTo(485, 180);
+        ctx.lineTo(475, 195);
+        ctx.stroke();
+        ctx.fill();
+
+        //tail curve right
+        ctx.strokeStyle = "#F2F6F7";
+        ctx.fillStyle = "#F2F6F7";
+        ctx.lineWidth = 15;
+        ctx.beginPath();
+        ctx.arc(565, 324, 17, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+
+        //tail shadow right
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.moveTo(560, 300);
+        ctx.lineTo(555, 320);
+        ctx.closePath();
+        ctx.stroke();
+
+        //back
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(520, 272, 37, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //legs
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 15;
+        ctx.lineCap = "square";
+        ctx.beginPath();
+        ctx.rect(551.5, 270, -70, 60);
+        ctx.stroke();
+        ctx.fill();
+
+        //leg shadow 1
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(495, 283);
+        ctx.lineTo(495, 335);
+        ctx.stroke();
+
+        //leg shadow 2
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.arc(525, 310, 30, 3, 4.2);
+        ctx.stroke();
+
+        //neck
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.fillStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(490, 250, 33, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+
+        //face white
+        ctx.strokeStyle = "#F2F6F7";
+        ctx.fillStyle = "#F2F6F7";
+        ctx.lineWidth = 5;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(455, 225, 35, 0.4, 2.8);
+        ctx.stroke();
+        ctx.fill();
+
+        //face white curve
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.arc(475, 245, 10, 5.8, 4.6, true);
+        ctx.stroke();
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.lineWidth = 7;
+        ctx.beginPath();
+        ctx.arc(478, 245, 10, 5.8, 4.6, true);
+        ctx.stroke();
+
+        //curve on face
+        ctx.strokeStyle = "#B7B7B7";
+        ctx.lineWidth = 1.5;
+        ctx.beginPath();
+        ctx.arc(471, 240, 30, 2.3, 3);
+        ctx.stroke();
+
+        //right eye shadow part 1
+
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(449, 237);
+        ctx.lineTo(449, 220);
+        ctx.lineTo(465, 210);
+        ctx.stroke();
+
+        //right eye shadow part 2
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(449, 215);
+        ctx.lineTo(465, 210);
+        ctx.stroke();
+
+        //left eye shadow part 1
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 3;
+        ctx.beginPath();
+        ctx.moveTo(433, 237);
+        ctx.lineTo(433, 220);
+        ctx.lineTo(425, 215);
+        ctx.stroke();
+
+        //left eye shadow part 2
+        ctx.strokeStyle = "#E9EBEE";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(433, 215);
+        ctx.lineTo(425, 212);
+        ctx.stroke();
+
+        //nose
+        ctx.strokeStyle = "#000";
+        ctx.fillStyle = "#000";
+        ctx.lineWidth = 3;
+        ctx.lineCap = "milter";
+        ctx.beginPath();
+        ctx.moveTo(441, 242);
+        ctx.lineTo(447, 237);
+        ctx.lineTo(435, 237);
+        ctx.lineTo(441, 242);
+        ctx.stroke();
+        ctx.fill();
+
+        //head shadow
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.arc(444, 217, 50, 0, 1.25);
+        ctx.stroke();
+        ctx.closePath();
+
+        //tail shadow left
+        ctx.strokeStyle = "#CBCDCF";
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(495, 315);
+        ctx.lineTo(550, 320);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+
+        // front tail part
+        ctx.strokeStyle = "#F2F6F7";
+        ctx.fillStyle = "#F2F6F7";
+        ctx.lineWidth = 15;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.rect(480, 325, 80, 16);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+
+        //tail curve left
+        ctx.strokeStyle = "#F2F6F7";
+        ctx.fillStyle = "#F2F6F7";
+        ctx.lineWidth = 15;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.arc(473, 333, 8, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.stroke();
+        ctx.fill();
+
+        //bottom left whisker
+        ctx.strokeStyle = "#DEDEDD";
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(433, 250);
+        ctx.lineTo(400, 255);
+        ctx.stroke();
+
+        //top left whisker
+        ctx.strokeStyle = "#DEDEDD";
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(430, 245);
+        ctx.lineTo(400, 245);
+        ctx.stroke();
+
+        //bottom right whisker
+        ctx.strokeStyle = "#DEDEDD";
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(460, 250);
+        ctx.lineTo(490, 255);
+        ctx.stroke();
+
+        //top right whisker
+        ctx.strokeStyle = "#DEDEDD";
+        ctx.lineWidth = 2;
+        ctx.lineCap = "round";
+        ctx.beginPath();
+        ctx.moveTo(463, 245);
+        ctx.lineTo(493, 245);
+        ctx.stroke();
+    </script>
+</body>
+</html>
