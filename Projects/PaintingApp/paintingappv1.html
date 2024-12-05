@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting App</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        #canvas{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #menu{
+            background-color: silver;
+            border: 2px solid #333;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            position: fixed;
+            padding: 1rem;
+            display: flex;
+        }
+        div{padding-right: 2px;}
+        img{
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <section id="menu">
+        <input type="color" id="colorpicker" value="#00ff00">
+        <input type="range" id="rangepicker" min="5" max="100" value="15">
+        <div id="erase"><img src="Images/eraser.png" alt="eraser"></div>
+        <div id="clear"><img src="Images/bin.png" alt="trash"></div>
+        <div id="undo"><img src="Images/undo.svg" alt="undo"></div>
+    </section>
+
+    <script>
+        // create javascript variables
+        let canvasColor = "white"; //to be used on eraser
+        let brushColor = "#000"; //default brush color
+        let painting = false;
+        let brushSize = 15;
+
+        //create canvas variables
+        const CANVAS = window.document.querySelector('#canvas');
+        
+        const CTX = CANVAS.getContext('2d');
+
+        //create tool bar/menu variables
+        const COLORPICKER = window.document.querySelector('#colorpicker');
+        const RANGEPICKER = window.document.querySelector('#rangepicker');
+        const ERASER = window.document.querySelector('#erase');
+        const CLEAR = window.document.querySelector('#clear');
+        const UNDO = window.document.querySelector('#undo');
+
+        //set canvas style
+        CANVAS.style.backgroundColor = canvasColor;
+        CANVAS.width = window.innerWidth;
+        CANVAS.height = window.innerHeight;
+
+        //add event listeners to menu items
+        COLORPICKER.addEventListener('click', function(){alert('Colorpicker!')});
+        RANGEPICKER.addEventListener('click', function(){alert('Rangepicker!')});
+        ERASER.addEventListener('click', function(){alert('Erase!')});
+        CLEAR.addEventListener('click', function(){alert('Clear!')});
+        UNDO.addEventListener('click', function(){alert('Undo!')});
+    </script>
+
+</body>
+</html>

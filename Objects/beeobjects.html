@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Objects</title>
+</head>
+<body>
+    <h1>Bee Objects</h1>
+
+    <script>
+        //all object have properties and methods
+        //window object
+        //window.innerWidth is a property
+        //window.alert() is a method of the window object
+        //document objectt
+        //document.title is a property
+        //document.write is a method
+
+        /*
+        Methods and functions are the same
+        Methods are functions that are for a specific object
+        */
+
+        //creating custom objects
+        //bee object
+        const BEE = {
+            name: 'Bee', 
+            color: 'Black and Yellow', 
+            size: 'Small',
+            isAlive: true,
+            image: '<img src="Images/bee.png">',
+            sound: function(){return 'bzzzz!'},
+        };
+
+        //examine the bee
+        window.document.write(BEE.name + '<br>');
+        window.document.write(BEE.color + '<br>');
+        window.document.write(BEE.size + '<br>');
+        window.document.write(BEE.isAlive + '<br>');
+        window.document.write(BEE.image + '<br>');
+        window.document.write(BEE.sound() + '<br>');
+    </script>
+</body>
+</html>
