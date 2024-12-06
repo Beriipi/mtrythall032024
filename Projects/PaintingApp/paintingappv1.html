@@ -71,6 +71,11 @@
         ERASER.addEventListener('click', function(){alert('Erase!')});
         CLEAR.addEventListener('click', function(){alert('Clear!')});
         UNDO.addEventListener('click', function(){alert('Undo!')});
+        document.addEventListener('click', function(e){alert(e.x + ' ' + e.y)
+        console.log(e.target)
+    });
+
+        
     </script>
 
 </body>
