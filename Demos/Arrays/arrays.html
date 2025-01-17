@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <style>
+        body{
+            background-color: black;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <h2>Index, Push, Pop, and Shift</h2>
+    <ul>
+        <li>Push - Add an item to the end of an array</li>
+        <li>Pop - Delete the last item of an array</li>
+        <li>Shift - Delete the first item of an array</li>
+    </ul>
+
+    <script>
+        //arrays
+        //create an array variable
+        let myList;
+
+        //array can contain multiple values
+        myList = [];
+
+        //assign values to an array
+        myList[0] = "Fido"; //index 0
+        myList[1] = "Ajax"; //index 1
+        myList[2] = "Pixel"; //index 2
+        myList[3] = "Butters"; //index 3
+
+        //display array
+        //window.alert(myList.length);
+        
+        //manipulate the array using push
+        myList.push("Oreo");
+        myList.push("Sunny");
+        myList.push("Brownie");
+        myList.push("Dusty");
+
+        //manipulate the array with pop
+        myList.pop(); //delete last item of an array
+        myList.pop();
+
+        //manipulate the array using shift
+        myList.shift(); //delete the first item of an array
+
+        //display array
+        console.log(myList);
+
+    </script>
+</body>
+</html>

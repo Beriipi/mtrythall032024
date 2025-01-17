@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays for Each</title>
+    <style>
+        body{
+            background-color: black;
+            color: wheat;
+        }
+    </style>
+</head>
+    <h1>Arrays for Each</h1>
+    <script>
+        //arrays
+        //cycle through array elements
+
+        let myCats = []; // blank array
+
+        //assign a few values
+        myCats[0] = "Fluffy"; // index 0
+        myCats[1] = "Felix"; //index 1
+        myCats[2] = "Garfield"; //index 2
+        myCats[3] = "Heathcliff"; //index 3
+
+        //display
+        window.document.write(myCats);
+
+        //manipulate the array
+        myCats.push("Sylvester");
+        myCats.push("Fido");
+        
+        //display
+        console.log(myCats);
+
+        //correct the error
+        myCats.pop(); // delete fido last element
+        myCats.shift(); //delete fluffy first element
+
+        //manipulate the array
+        myCats.unshift('Tom');
+
+        //display number of elements in an array
+        console.log(myCats.length);
+
+        /*
+        multi line comment - Notes
+        
+        forEach allows you to cycle through an array
+        
+        myCats.forEach();
+        myCats.forEach(function(){});
+        myCats.forEach(function(cat){insert code}); [for each cat, i want you to run this code]
+
+        example:
+
+        myCats.forEach(function(cat){
+            console.log("I love " + cat);
+        });
+        */
+
+        myCats.forEach(function(cat){
+            console.log("I love " + cat);
+        });
+
+        myCats.forEach(function(c){
+            console.log("I miss " + c);
+        });
+
+        myCats.forEach(function(cn, index){
+            window.alert(cn + " is index " + index);
+        });
+
+    </script>
+</body>
+</html>

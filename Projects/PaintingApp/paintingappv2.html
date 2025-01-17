@@ -38,17 +38,19 @@
         <input type="range" id="rangepicker" min="5" max="100" value="15">
         <div id="erase"><img src="Images/eraser.png" alt="eraser"></div>
         <div id="clear"><img src="Images/bin.png" alt="trash"></div>
-        <div id="undo"><img src="Images/undo.png" alt="undo"></div>
-        <div id="redo"><img src="Images/redo.png" alt="redo"></div>
-        <div id="download"><img src="Images/download.png" alt=""></div>
+        <div id="bucket"><img src="Images/bucket.svg" alt="bucket"></div>
+        <div id="undo"><img src="Images/undo.svg" alt="undo"></div>
+        <div id="redo"><img src="Images/redo.svg" alt="redo"></div>
+        <div id="download"><img src="Images/download.svg" alt="download"></div>
     </section>
 
     <script>
         // create javascript variables
         let canvasColor = "white"; //to be used on eraser
-        let brushColor = "#000"; //default brush color
+        let brushColor = "black"; //default brush color
         let painting = false;
         let brushSize = 15;
+        let canvasData;
 
         //canvas drawing variables
         let lineJoinStyle = "round";
@@ -64,6 +66,7 @@
         const RANGEPICKER = window.document.querySelector('#rangepicker');
         const ERASER = window.document.querySelector('#erase');
         const CLEAR = window.document.querySelector('#clear');
+        const BUCKET = window.document.querySelector('#bucket');
         const UNDO = window.document.querySelector('#undo');
         const REDO = window.document.querySelector('#redo');
         const DOWNLOAD = window.document.querySelector('#download');
@@ -72,6 +75,10 @@
         CANVAS.style.backgroundColor = canvasColor;
         CANVAS.width = window.innerWidth;
         CANVAS.height = window.innerHeight;
+
+        //color the canvas
+        CTX.fillStyle = canvasColor;
+        CTX.fillRect(0,0, CANVAS.width, CANVAS.height);
 
         //add event listeners to menu items
         COLORPICKER.addEventListener('input', function(e){
@@ -87,9 +94,24 @@
 
             CTX.clearRect(0,0, CANVAS.width, CANVAS.height);
         });
-        UNDO.addEventListener('click', function(){});
-        REDO.addEventListener('click', function(){});
-        DOWNLOAD.addEventListener('click', function(){});
+        BUCKET.addEventListener('click', function(){
+            alert("bucket");
+        });
+        UNDO.addEventListener('click', function(){
+            alert("undo");
+        });
+        REDO.addEventListener('click', function(){
+            alert("redo");
+        });
+        DOWNLOAD.addEventListener('click', function(){
+            let imageData = CANVAS.toDataURL();
+
+            let link = document.createElement('a');
+            link.href = imageData;
+            link.download = "paintingappimage";
+            link.click();
+            link.remove();
+        });
 
         //create object to track x and y objects
         const MOUSE = {
@@ -119,6 +141,17 @@
 
         CANVAS.addEventListener('mouseup', function(){
             painting = false;
+
+            canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+            //alert(canvasData);
+        });
+
+        window.addEventListener('resize', function(){
+            //alert('resize');
+            CANVAS.width = window.innerWidth;
+            CANVAS.height = window.innerHeight;
+            //place canvas data on canvas
+            CTX.putImageData(canvasData, 0,0);
         });
         
         function draw(){
