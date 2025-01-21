@@ -50,6 +50,10 @@
         let brushSize = 15;
         let canvasData;
 
+        //create undo variables
+        let undoArray = []; //to hold onto snapshots of drawing data
+        let undoIndex = -1; //to track the current index of undoArray
+
         //canvas drawing variables
         let lineJoinStyle = "round";
         let lineCapStyle = "round";
@@ -119,7 +123,7 @@
             //start painting
             CTX.beginPath();
             CTX.moveTo(MOUSE.x, MOUSE.y);
-            console.log(e);
+            //console.log(e);
         });
         
         CANVAS.addEventListener('mousemove', function(e){
@@ -128,20 +132,42 @@
             draw();
         });
 
-        CANVAS.addEventListener('mouseup', function(){
+        CANVAS.addEventListener('mouseup', function(e){
             painting = false;
+            //prevent default behavior
+            e.preventDefault(); //prevent default behavior
+
+            captureImageData(e);
 
             canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
             //alert(canvasData);
+            //console.log(canvasData);
+
+            //prevent unwanted behavior
+            CTX.beginPath();
         });
 
-        window.addEventListener('resize', function(){
-            //alert('resize');
-            CANVAS.width = window.innerWidth;
-            CANVAS.height = window.innerHeight;
-            //place canvas data on canvas
-            CTX.putImageData(canvasData, 0,0);
-        });
+        function captureImageData(e){
+            if(e.type == "mouseup"){
+                //alert("mouseup");
+                //assign data to variable to hold the image data
+                canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
+
+                undoArray.push(canvasData);
+                console.log(undoArray);
+
+                undoIndex = undoIndex + 1; //update arayIndex
+                console.log(undoIndex);
+                }
+            };
+
+        // window.addEventListener('resize', function(){
+        //     alert('resize');
+        //     CANVAS.width = window.innerWidth;
+        //     CANVAS.height = window.innerHeight;
+        //     //place canvas data on canvas
+        //     CTX.putImageData(canvasData, 0,0);
+        // });
         
         function draw(){
             if(painting == true){

@@ -18,12 +18,15 @@
     <script>
         let studioGhibli = [];
 
+        
+
         studioGhibli[0] = "Castle in the Sky";
         studioGhibli[1] = "My Neighbor Totoro";
         studioGhibli[2] = "Kiki's Delivery Service";
         studioGhibli[3] = "Ponyo";
 
         console.log(studioGhibli);
+        console.log(studioGhibli.length);
 
         studioGhibli.push("Spirited Away");
         studioGhibli.push("Whisper of the Heart");
@@ -32,6 +35,9 @@
         studioGhibli.shift();
         studioGhibli.unshift("Princess Mononoke");
 
+        studioGhibli.forEach(function(sg){
+            console.log("I love the movie " + sg);
+        });
     </script>
 </body>
 </html>
