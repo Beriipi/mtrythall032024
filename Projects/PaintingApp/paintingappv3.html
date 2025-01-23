@@ -60,7 +60,7 @@
 
         //create canvas variables
         const CANVAS = window.document.querySelector('#canvas');
-        const CTX = CANVAS.getContext('2d');
+        const CTX = CANVAS.getContext('2d', {willReadFrequently: true});
 
         //create tool bar/menu variables
         const COLORPICKER = window.document.querySelector('#colorpicker');
@@ -91,10 +91,11 @@
         });
         CLEAR.addEventListener('click', function(){
 
-            CTX.clearRect(0,0, CANVAS.width, CANVAS.height);
+            clearCanvas();
         });
         UNDO.addEventListener('click', function(){
-            alert("undo");
+            //alert("undo");
+            undoLast();
         });
         DOWNLOAD.addEventListener('click', function(){
             let imageData = CANVAS.toDataURL();
@@ -123,7 +124,7 @@
             //start painting
             CTX.beginPath();
             CTX.moveTo(MOUSE.x, MOUSE.y);
-            //console.log(e);
+            
         });
         
         CANVAS.addEventListener('mousemove', function(e){
@@ -141,7 +142,7 @@
 
             canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
             //alert(canvasData);
-            //console.log(canvasData);
+            
 
             //prevent unwanted behavior
             CTX.beginPath();
@@ -154,10 +155,8 @@
                 canvasData = CTX.getImageData(0,0, CANVAS.width, CANVAS.height);
 
                 undoArray.push(canvasData);
-                console.log(undoArray);
 
                 undoIndex = undoIndex + 1; //update arayIndex
-                console.log(undoIndex);
                 }
             };
 
@@ -178,6 +177,27 @@
                 CTX.lineTo(MOUSE.x, MOUSE.y);
                 CTX.stroke();
             }
+        }
+
+        function undoLast(){
+            if(undoIndex <= 0){
+                clearCanvas();
+            }
+            else{
+                undoIndex = undoIndex - 1;
+
+                undoArray.pop(); //delete last item in array (snapshot)
+                CTX.putImageData(undoArray[undoIndex], 0,0);
+            }
+        }
+
+        function clearCanvas(){
+            CTX.fillStyle = canvasColor;
+            CTX.clearRect(0,0, CANVAS.width, CANVAS.height);
+
+            //reset undo variables
+            undoArray = []; //to capture snapshots of drawing data
+            undoIndex = -1; //to track undo array index value
         }
     </script>
 
