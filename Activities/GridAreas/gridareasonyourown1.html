@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OYO Grid Areas</title>
+    <style>
+        #container{
+            background-color: black;
+            max-width: 1000px;
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+            margin: auto;
+        }
+        #wrapper{
+            background-color: silver;
+            margin: auto;
+            max-width: 90%;
+        }
+        #pageheader{
+            background-color: red;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:hea;
+            transition: min-height 2s;
+        }
+        #mainnav{
+            background-color: orange;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:nav;
+        }
+        #intromedia{
+            background-color: yellow;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:med;
+            transition: min-height 2s;
+        }
+        #pagemain{
+            background-color: lime;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:mai;
+            transition: min-height 2s;
+        }
+        #pageaside{
+            background-color: green;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:asi;
+            transition: min-height 2s;
+        }
+        #card001{
+            background-color: blue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:cr1;
+            transition: min-height 2s;
+        }
+        #card002{
+            background-color: blueviolet;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:cr2;
+            transition: min-height 2s;
+        }
+        #card003{
+            background-color: purple;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:cr3;
+            transition: min-height 2s;
+        }
+        #pagefooter{
+            background-color: magenta;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:foo;
+        }
+        #pagedetails{
+            background-color: pink;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area:det;
+            transition: min-height 2s;
+        }
+
+        @media screen and (min-width:600px){
+            #wrapper{
+                display: grid;
+                gap: 10px;
+                grid-template-areas:
+                "hea hea hea"
+                "nav nav nav"
+                "med med med"
+                "mai mai asi"
+                "cr1 cr2 cr3"
+                "foo foo foo"
+                "det det det"
+                ;
+            }
+            #pageheader{
+                min-height: 10rem;
+            }
+            #intromedia{
+                min-height: 15rem;
+            }
+            #pagemain{
+                min-height: 20rem;
+            }
+            #pageaside{
+                min-height: 20rem;
+            }
+            #card001, #card002, #card003{
+                min-height: 15rem;
+            }
+            #pagedetails{
+                min-height: 10rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Areas</h1>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">pageheader</header>
+            <nav id="mainnav">mainnav</nav>
+            <div id="intromedia">intromedia</div>
+            <main id="pagemain">pagemain</main>
+            <aside id="pageaside">pageaside</aside>
+            <section id="card001">card001</section>
+            <section id="card002">card002</section>
+            <section id="card003">card003</section>
+            <footer id="pagefooter">pagefooter</footer>
+            <footer id="pagedetails">pagedetails</footer>
+        </div>
+    </div>
+</body>
+</html>
