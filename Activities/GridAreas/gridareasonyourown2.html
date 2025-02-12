@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Areas On Your Own 2</title>
+    <style>
+        #container{
+            background-color: black;
+            max-width: 1200px;
+            width: 80%;
+            color: black;
+            margin: auto;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        #wrapper{
+            background-color: silver;
+            margin: auto;
+            max-width: 90%;
+        }
+        #pageheader{
+            background-color: red;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: hea;
+            transition: min-height 2s;
+        }
+        #intromedia{
+            background-color: orange;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: med;
+            transition: min-height 2s;
+        }
+        #mainnav{
+            background-color: yellow;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: nav;
+            transition: min-height 2s;
+        }
+        #pagemain{
+            background-color: white;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: mai;
+            transition: min-height 2s;
+        }
+        #card001{
+            background-color: lime;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd1;
+            transition: min-height 2s;
+        }
+        #card002{
+            background-color: green;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: cd2;
+            transition: min-height 2s;
+        }
+        #pagefooter{
+            background-color: blue;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: foo;
+            transition: min-height 2s;
+        }
+        #pagedetails{
+            background-color: purple;
+            min-height: 5rem;
+            padding: 1rem;
+            grid-area: det;
+            transition: min-height 2s;
+        }
+
+        @media screen and (min-width:768px){
+            #wrapper{
+                display: grid;
+                gap: 10px;
+                grid-template-areas: 
+                "hea hea hea"
+                "med med med"
+                "nav mai mai"
+                "nav cd1 cd2"
+                "foo foo foo"
+                "det det det"
+                ;
+            }
+            #pageheader{
+                min-height: 150px;
+            }
+            #intromedia{
+                min-height: 250px;
+            }
+            #pagemain{
+                min-height: 200px;
+            }
+            #card001, #card002{
+                min-height: 150px;
+            }
+            #pagedetails{
+                min-height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Areas On Your Own 2</h1>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">header</header>
+            <div id="intromedia">intromedia</div>
+            <nav id="mainnav">nav</nav>
+            <main id="pagemain">pagemain</main>
+            <div id="card001">card001</div>
+            <div id="card002">card002</div>
+            <footer id="pagefooter">pagefooter</footer>
+            <footer id="pagedetails">pagedetails</footer>
+        </div>
+    </div>
+    
+</body>
+</html>
