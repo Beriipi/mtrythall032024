@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <style>
+        /* Mobile */
+        body{background-color: white;
+            padding-top: 1rem;
+        }
+        #container{
+            max-width: 1200px;
+            width: 80%;
+            background-color: #999;
+            margin: auto;
+            margin-top: 4rem;
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+        }
+        #wrapper{
+            max-width: 90%;
+            background-color: green;
+            margin: auto;
+        }
+        #navlogo{
+            height: 100px;
+            width: 100px;
+            background-color: none;
+            position: absolute;
+            top: -120px;
+            left: calc(50% - (50px));
+            background-image: url(Images/logo2.jpg);
+            background-position: center center;
+            background-size: cover;
+            border: 2px solid black;
+            border-radius: 50%;
+            transition: all 2s;
+        }
+        #h1bcg{
+            background-color: silver;
+            text-align: center;
+            opacity: 60%;
+            max-width: 90%;
+            margin: auto;
+        }
+        #pageheader{
+            background-color: blue;
+            padding: 1rem;
+            min-height: 10rem;
+            grid-area: hea;
+            transition: min-height 2s;
+            position: relative;
+            background-image: url(Images/cat+dog/medium/beagleCat.jpg);
+            background-size:cover;
+        }
+        #mainnav1{
+            background-color: white;
+            padding: 1rem;
+            min-height: 2rem;
+            grid-area: nav;
+            transition: min-height 2s;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        #mainnav1 a{
+            color: black;
+        }
+        #mainnav2{
+            display: none;
+        }
+        #media{
+            display: none;
+        }
+        iframe{
+            display: none;
+        }
+        #main{
+            background-color: white;
+            padding: 1rem;
+            min-height: 10rem;
+            grid-area: mai;
+            transition: min-height 2s;
+        }
+        #main img{
+            width: 80%;
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            padding-top: 2px;
+            padding-bottom: 2px;
+        }
+        #subfooter{
+            background-color: white;
+            padding: 1rem;
+            min-height: 5rem;
+            grid-area: aub;
+            transition: min-height 2s;
+        }
+
+        @media screen and (min-width:700px){
+            #pageheader{
+                min-height: 15rem;
+            }
+            #headerlogo{
+                height: 100px;
+                width: 100px;
+                background-color: none;
+                position: absolute;
+                top: -120px;
+                left: calc(50% - (50px));
+                background-image: url(Images/logo2.jpg);
+                background-position: center center;
+                background-size: cover;
+                border: 2px solid black;
+                border-radius: 50%;
+            }
+            #mainnav1{
+                display: none;
+            }
+            #mainnav2{
+                background-color: white;
+                padding: 1rem;
+                min-height: 2rem;
+                grid-area: nav;
+                transition: min-height 2s;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            #mainnav2 a{
+                color: black;
+            }
+            #media{
+                display: block;
+                background-color: white;
+                padding: 1rem;
+                min-height: 5rem;
+                grid-area: med;
+                transition: min-height 2s;
+            }
+            iframe{
+                width: 80%;
+                aspect-ratio: 16/9;
+                margin: auto;
+                display: block;
+                max-width: 600px;
+            }
+            #main{
+                min-height: 20rem;
+            }
+        }
+        @media screen and (min-width:1500px){
+            #pageheader{
+                min-height: 20rem;
+            }
+        }
+        @media screen and (min-width:1000px){
+            #pageheader{
+                min-height: 25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="wrapper">
+            <nav id="mainnav1">
+                <div id="navlogo"></div>
+                <a href="#">Page 2</a> |
+                <a href="#">Page 3</a> |
+                <a href="#">Page 4</a>
+            </nav>
+            <header id="pageheader">
+                <div id="headerlogo"></div>
+                <div id="h1bcg"><h1>Central Valley Pets Inc.</h1></div>
+            </header>
+            <nav id="mainnav2">
+                <a href="#">Page 2</a> |
+                <a href="#">Page 3</a> |
+                <a href="#">Page 4</a>
+            </nav>
+            <div id="media">
+                <iframe src="https://www.youtube.com/embed/8c_pgT4TEnI?si=tsGTvCpOfrspxJb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <main id="main">
+                <h3>We offer many different kinds of pets for you to rescue!</h3>
+                <img src="Images/birds/medium/twoBirds.jpg" alt="Birds">
+                <img src="Images/cats/medium/kitten-collar.jpg" alt="Kitten">
+                <img src="Images/dogs/large/3dogs.jpg" alt="Dogs">
+                <img src="Images/fish/large/aquarium-g7a29f4278_1920.jpg" alt="Fish">
+                <img src="Images/frogs/medium/frogOnTwig.jpg" alt="Frog">
+                <img src="Images/rabbits/medium/rabbits.jpg" alt="Rabbits">
+                <img src="Images/rodents/medium/whiteMouse.jpg" alt="Rodents">
+                <img src="Images/snakes/large/line-g822f47956_1920.jpg" alt="Snakes">
+                <img src="Images/spiders/large/spider-g2b8c92715_1920.jpg" alt="Spiders">
+                <img src="Images/turtles/medium/babyTurtle.jpg" alt="Turtles">
+            </main>
+            <footer id="subfooter">
+                Contact us at:
+                <br/>
+                555-555-5555
+                <br/>
+                centralvalleypets@gmail.com
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
