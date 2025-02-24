@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Adoption</title>
     <style>
+        :root{
+            --color-primary: #4AC8BA;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
         /* Mobile */
-        body{background-color: white;
+        body{
             padding-top: 1rem;
+            background-image: url(Images/bcg.jpg);
+            background-attachment: fixed;
+            background-size:cover;
+            background-color: var(--color-primary);
         }
         #container{
             max-width: 1200px;
             width: 80%;
-            background-color: #999;
+            background-color: #307971;;
             margin: auto;
             margin-top: 4rem;
             padding-top: 4rem;
@@ -38,14 +48,14 @@
             transition: all 2s;
         }
         #h1bcg{
-            background-color: silver;
+            background-color: white;
             text-align: center;
             opacity: 60%;
             max-width: 90%;
             margin: auto;
         }
         #pageheader{
-            background-color: blue;
+            background-color: white;
             padding: 1rem;
             min-height: 10rem;
             grid-area: hea;
@@ -53,6 +63,7 @@
             position: relative;
             background-image: url(Images/cat+dog/medium/beagleCat.jpg);
             background-size:cover;
+            border: solid 1px #307971;
         }
         #mainnav1{
             background-color: white;
@@ -64,6 +75,7 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+            border: solid 1px #307971;
         }
         #mainnav1 a{
             color: black;
@@ -83,6 +95,8 @@
             min-height: 10rem;
             grid-area: mai;
             transition: min-height 2s;
+            text-align: center;
+            border: solid 1px #307971;
         }
         #main img{
             width: 80%;
@@ -92,12 +106,25 @@
             padding-top: 2px;
             padding-bottom: 2px;
         }
+        #main h3{
+            background-color: #73A19B;
+            width: 100%;
+            height: 23px;
+        }
         #subfooter{
             background-color: white;
             padding: 1rem;
             min-height: 5rem;
             grid-area: aub;
             transition: min-height 2s;
+            border: solid 1px #307971;
+        }
+        #desktopscroll{
+            display: none;
+            color: black;
+        }
+        #mobilescroll{
+            color: black;
         }
 
         @media screen and (min-width:700px){
@@ -130,6 +157,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-evenly;
+                border: solid 1px #307971;
             }
             #mainnav2 a{
                 color: black;
@@ -141,6 +169,7 @@
                 min-height: 5rem;
                 grid-area: med;
                 transition: min-height 2s;
+                border: solid 1px #307971;
             }
             iframe{
                 width: 80%;
@@ -151,6 +180,12 @@
             }
             #main{
                 min-height: 20rem;
+            }
+            #mobilescroll{
+                display: none;
+            }
+            #desktopscroll{
+                display: block;
             }
         }
         @media screen and (min-width:1500px){
@@ -174,7 +209,8 @@
                 <div id="navlogo"></div>
                 <a href="#">Page 2</a> |
                 <a href="#">Page 3</a> |
-                <a href="#">Page 4</a>
+                <a href="#">Page 4</a> |
+                <a href="#subfooter">Contact Info</a>
             </nav>
             <header id="pageheader">
                 <div id="headerlogo"></div>
@@ -183,30 +219,44 @@
             <nav id="mainnav2">
                 <a href="#">Page 2</a> |
                 <a href="#">Page 3</a> |
-                <a href="#">Page 4</a>
+                <a href="#">Page 4</a> |
+                <a href="#subfooter">Contact Info</a>
             </nav>
             <div id="media">
                 <iframe src="https://www.youtube.com/embed/8c_pgT4TEnI?si=tsGTvCpOfrspxJb0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
             <main id="main">
-                <h3>We offer many different kinds of pets for you to rescue!</h3>
+                <h2>We offer many different kinds of pets for you to rescue!</h2>
+                <h3>Birds</h3> <br>
                 <img src="Images/birds/medium/twoBirds.jpg" alt="Birds">
+                <h3>Cats</h3> <br>
                 <img src="Images/cats/medium/kitten-collar.jpg" alt="Kitten">
+                <h3>Dogs</h3> <br>
                 <img src="Images/dogs/large/3dogs.jpg" alt="Dogs">
+                <h3>Fish</h3> <br>
                 <img src="Images/fish/large/aquarium-g7a29f4278_1920.jpg" alt="Fish">
+                <h3>Frogs</h3> <br>
                 <img src="Images/frogs/medium/frogOnTwig.jpg" alt="Frog">
+                <h3>Rabbits</h3> <br>
                 <img src="Images/rabbits/medium/rabbits.jpg" alt="Rabbits">
+                <h3>Rodents</h3> <br>
                 <img src="Images/rodents/medium/whiteMouse.jpg" alt="Rodents">
+                <h3>Snakes</h3> <br>
                 <img src="Images/snakes/large/line-g822f47956_1920.jpg" alt="Snakes">
+                <h3>Spiders</h3> <br>
                 <img src="Images/spiders/large/spider-g2b8c92715_1920.jpg" alt="Spiders">
+                <h3>Turtles</h3> <br>
                 <img src="Images/turtles/medium/babyTurtle.jpg" alt="Turtles">
             </main>
             <footer id="subfooter">
                 Contact us at:
-                <br/>
+                <br>
                 555-555-5555
-                <br/>
+                <br>
                 centralvalleypets@gmail.com
+                <br>
+                <a id="mobilescroll" href="#navlogo">Head back to the top</a>
+                <a id="desktopscroll" href="#headerlogo">Head back to the top</a>
             </footer>
         </div>
     </div>
