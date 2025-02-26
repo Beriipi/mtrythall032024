@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox List</title>
+    <style>
+        nav{
+            background-color: red;
+            padding: 1rem;
+        }
+        ul{
+            background-color: blue;
+            list-style-type:none;
+            padding: 0;
+            max-width: 1000px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        li{
+            background-color: orange;
+            padding: 1rem;
+            border: 1px solid black;
+            text-align: center;
+        }
+        @media screen and (min-width: 600px){
+            ul{
+                display: flex;
+                justify-content: space-evenly;
+            }
+            li{
+                width: 85px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Flexbox List</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="whyadopt">Why Adopt</a></li>
+            <li><a href="ouranimals">Our Animals</a></li>
+            <li><a href="testimonials">Testimonials</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
