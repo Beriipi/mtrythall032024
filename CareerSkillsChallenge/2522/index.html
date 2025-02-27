@@ -30,7 +30,7 @@
         }
         #wrapper{
             max-width: 90%;
-            background-color: green;
+            background-color: none;
             margin: auto;
         }
         #navlogo{
@@ -46,6 +46,19 @@
             border: 2px solid black;
             border-radius: 50%;
             transition: all 2s;
+        }
+        ul{
+            background-color: none;
+            list-style-type:none;
+            padding: 0;
+            width: 100%;
+            margin: auto;
+            background-color: white;
+        }
+        li{
+            padding: 1rem;
+            border: 1px solid #307971;
+            text-align: center;
         }
         #h1bcg{
             background-color: white;
@@ -94,6 +107,7 @@
             padding: 1rem;
             min-height: 10rem;
             grid-area: mai;
+            line-height: 1.5;
         }
         section{
             background-color: white;
@@ -249,19 +263,23 @@
         <div id="wrapper">
             <nav id="mainnav1">
                 <div id="navlogo"></div>
-                <a href="#">Page 2</a> |
-                <a href="#">Page 3</a> |
-                <a href="#">Page 4</a> |
-                <a href="#subfooter">Contact Info</a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Why Adopt?</a></li>
+                    <li><a href="#">Photo Page</a></li>
+                    <li><a href="#">Testimonial Page</a></li>
+                    <li><a href="#subfooter">Contact Info</a></li>
+                </ul>
             </nav>
             <header id="pageheader">
                 <div id="headerlogo"></div>
                 <div id="h1bcg"><h1>Central Valley Pets Inc.</h1></div>
             </header>
             <nav id="mainnav2">
-                <a href="#">Page 2</a> |
-                <a href="#">Page 3</a> |
-                <a href="#">Page 4</a> |
+                <a href="index.html">Home</a> |
+                <a href="#">Why Adopt?</a> |
+                <a href="#">Photo Page</a> |
+                <a href="#">Testimonial Page</a> |
                 <a href="#subfooter">Contact Info</a>
             </nav>
             <div id="media">
@@ -293,6 +311,8 @@
                 555-555-5555
                 <br>
                 centralvalleypets@gmail.com
+                <br>
+                1234 Main St. Coalinga CA 93210
                 <br>
                 <a id="mobilescroll" href="#navlogo">Head back to the top</a>
                 <a id="desktopscroll" href="#headerlogo">Head back to the top</a>
