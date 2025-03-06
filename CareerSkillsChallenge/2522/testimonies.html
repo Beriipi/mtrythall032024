@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #flexbox002{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            background-color: none;
+        }
+        #flexbox002 img{
+            background-color: red;
+            background-position: center center;
+            background-size: cover;
+            flex-shrink: 0;
+            max-width: 80%;
+            height: 200px;
+            aspect-ratio: 4/3;
+            border-radius: 25px;
+        }
+        #flexbox002 p{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="wrapper">
+            <nav id="mainnav1">
+                <div id="navlogo"></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="whyadopt.html">Why Adopt?</a></li>
+                    <li><a href="photos.html">Photo Page</a></li>
+                    <li><a href="testimonies.html">Testimonial Page</a></li>
+                    <li><a href="#subfooter">Contact Info</a></li>
+                </ul>
+            </nav>
+            <header id="pageheader">
+                <div id="headerlogo"></div>
+                <div id="h1bcg"><h1>Central Valley Pets Inc.</h1></div>
+            </header>
+            <nav id="mainnav2">
+                <a href="index.html">Home</a> |
+                <a href="whyadopt.html">Why Adopt?</a> |
+                <a href="photos.html">Photo Page</a> |
+                <a href="testimonies.html">Testimonial Page</a> |
+                <a href="#subfooter">Contact Info</a>
+            </nav>
+            <main id="main">
+                <div id="flexbox002">
+                    <div>
+                        <img src="Images/testimonies/dog1.jpg" alt="Dog">
+                    </div>
+                    <p>I’m so grateful to Central Valley Pets for creating such a nurturing environment for these wonderful dogs and for helping me find my new best friend.</p>
+                    <div>
+                        <img src="Images/testimonies/dog2.jpg" alt="Dog">
+                    </div>
+                    <p>Adoption means family. It means the dog choosing you as their furever home and us making sure they never have sad feelings again.</p>
+                    <div><img src="Images/testimonies/cat1.jpg" alt="Cat"></div>
+                    <p>Today is our two year anniversary with Eliza Lou. She is doing great. She is our perfect little lap cat, quite demanding but we don't care. She is very sweet and has never tried to bite or scratch us. We hope you are well. Thank you for saving the lives of animals. God Bless.</p>
+                    <div><img src="Images/testimonies/cat2.jpg" alt="Cat"></div>
+                    <p>So thankful for you and all the hard work and hours. This guy has no social issues at all and is just the best and friendliest. My home daycare houses up to 10 children daily and a work from home husband., two rescued doodles, and of course our Jazzie we adopted from you 5 years ago. We’re so blessed!</p>
+                </div>
+            </main>
+            <footer id="subfooter">
+                Contact us at:
+                <br>
+                555-555-5555
+                <br>
+                centralvalleypets@gmail.com
+                <br>
+                1234 Main St. Coalinga CA 93210
+                <br>
+                <a id="mobilescroll" href="#navlogo">Head back to the top</a>
+                <a id="desktopscroll" href="#headerlogo">Head back to the top</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

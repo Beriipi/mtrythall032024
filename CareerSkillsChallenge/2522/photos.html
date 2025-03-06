@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #flexbox002{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            background-color: none;
+        }
+        #flexbox002 img{
+            background-color: red;
+            background-position: center center;
+            background-size: cover;
+            flex-shrink: 0;
+            max-width: 100%;
+            height: 200px;
+            aspect-ratio: 4/3;
+            border-radius: 25px;
+        }
+        #flexbox002 p{
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        
+        <div id="wrapper">
+            <nav id="mainnav1">
+                <div id="navlogo"></div>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="whyadopt.html">Why Adopt?</a></li>
+                    <li><a href="photos.html">Photo Page</a></li>
+                    <li><a href="testimonies.html">Testimonial Page</a></li>
+                    <li><a href="#subfooter">Contact Info</a></li>
+                </ul>
+            </nav>
+            <header id="pageheader">
+                <div id="headerlogo"></div>
+                <div id="h1bcg"><h1>Central Valley Pets Inc.</h1></div>
+            </header>
+            <nav id="mainnav2">
+                <a href="index.html">Home</a> |
+                <a href="whyadopt.html">Why Adopt?</a> |
+                <a href="photos.html">Photo Page</a> |
+                <a href="testimonies.html">Testimonial Page</a> |
+                <a href="#subfooter">Contact Info</a>
+            </nav>
+            <main id="main">
+                <div id="flexbox002">
+                    <div><img src="Images/cats/medium/kissKitten.jpg" alt=""></div>
+                    <div><img src="Images/dogs/large/manGiantDog.jpg" alt=""></div>
+                    <div><img src="Images/dogs/medium/couple-withDog.jpg" alt=""></div>
+                    <div><img src="Images/frogs/large/boy-Frog.jpg" alt=""></div>
+                    <div><img src="Images/snakes/large/snake-gd388b0d57_1920.jpg" alt=""></div>
+                    <div><img src="Images/turtles/medium/turtle-sweater.jpg" alt=""></div>
+                </div>
+            </main>
+            <footer id="subfooter">
+                Contact us at:
+                <br>
+                555-555-5555
+                <br>
+                centralvalleypets@gmail.com
+                <br>
+                1234 Main St. Coalinga CA 93210
+                <br>
+                <a id="mobilescroll" href="#navlogo">Head back to the top</a>
+                <a id="desktopscroll" href="#headerlogo">Head back to the top</a>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

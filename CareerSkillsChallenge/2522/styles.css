@@ -1,0 +1,224 @@
+:root{
+    --color-primary: #4AC8BA;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* Mobile */
+body{
+    padding-top: 1rem;
+    background-image: url(Images/bcg.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-color: var(--color-primary);
+}
+#container{
+    max-width: 1200px;
+    width: 80%;
+    background-color: #307971;;
+    margin: auto;
+    margin-top: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+#wrapper{
+    max-width: 90%;
+    background-color: none;
+    margin: auto;
+}
+#navlogo{
+    height: 100px;
+    width: 100px;
+    background-color: none;
+    position: absolute;
+    top: -120px;
+    left: calc(50% - (50px));
+    background-image: url(Images/logo2.jpg);
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: all 2s;
+}
+ul{
+    background-color: none;
+    list-style-type:none;
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    background-color: white;
+}
+li{
+    padding: 1rem;
+    border: 1px solid #307971;
+    text-align: center;
+}
+#h1bcg{
+    background-color: white;
+    text-align: center;
+    opacity: 60%;
+    max-width: 90%;
+    margin: auto;
+}
+#pageheader{
+    background-color: white;
+    padding: 1rem;
+    min-height: 10rem;
+    grid-area: hea;
+    transition: min-height 2s;
+    position: relative;
+    background-image: url(Images/cat+dog/medium/beagleCat.jpg);
+    background-size:cover;
+    border: solid 1px #307971;
+}
+#mainnav1{
+    background-color: white;
+    padding: 1rem;
+    min-height: 2rem;
+    grid-area: nav;
+    transition: min-height 2s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: solid 1px #307971;
+}
+#mainnav1 a{
+    color: black;
+}
+#mainnav2{
+    display: none;
+}
+#media{
+    display: none;
+}
+iframe{
+    display: none;
+}
+#main{
+    background-color: white;
+    padding: 1rem;
+    min-height: 10rem;
+    grid-area: mai;
+    line-height: 1.5;
+    border: solid 1px #307971;
+}
+section{
+    background-color: white;
+    padding: 1rem;
+    min-height: 10rem;
+    grid-area: sec;
+    transition: min-height 2s;
+    text-align: center;
+    border: solid 1px #307971;
+}
+section img{
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+article h3{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: .5rem;
+    border: 2px solid #307971;
+    text-align: center;
+    border-radius: 25px;
+    text-transform: uppercase;
+    flex: 1;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+}
+#subfooter{
+    background-color: white;
+    padding: 1rem;
+    min-height: 5rem;
+    grid-area: aub;
+    transition: min-height 2s;
+    border: solid 1px #307971;
+}
+#desktopscroll{
+    display: none;
+    color: black;
+}
+#mobilescroll{
+    color: black;
+}
+
+@media screen and (min-width:700px){
+    #pageheader{
+        min-height: 15rem;
+    }
+    #headerlogo{
+        height: 100px;
+        width: 100px;
+        background-color: none;
+        position: absolute;
+        top: -120px;
+        left: calc(50% - (50px));
+        background-image: url(Images/logo2.jpg);
+        background-position: center center;
+        background-size: cover;
+        border: 2px solid black;
+        border-radius: 50%;
+    }
+    #mainnav1{
+        display: none;
+    }
+    #mainnav2{
+        background-color: white;
+        padding: 1rem;
+        min-height: 2rem;
+        grid-area: nav;
+        transition: min-height 2s;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        border: solid 1px #307971;
+    }
+    #mainnav2 a{
+        color: black;
+    }
+    #media{
+        display: block;
+        background-color: white;
+        padding: 1rem;
+        min-height: 5rem;
+        grid-area: med;
+        transition: min-height 2s;
+        border: solid 1px #307971;
+    }
+    iframe{
+        width: 80%;
+        aspect-ratio: 16/9;
+        margin: auto;
+        display: block;
+        max-width: 600px;
+    }
+    #main{
+        min-height: 20rem;
+    }
+    #mobilescroll{
+        display: none;
+    }
+    #desktopscroll{
+        display: block;
+    }
+}
+@media screen and (min-width:1500px){
+    #pageheader{
+        min-height: 20rem;
+    }
+
+}
+@media screen and (min-width:1000px){
+    #pageheader{
+        min-height: 25rem;
+    }
+}
