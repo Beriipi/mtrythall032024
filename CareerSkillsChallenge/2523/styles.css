@@ -1,0 +1,103 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-image: url(Images/background.png);
+    background-attachment: fixed;
+    background-size:cover;
+    background-color: #250103;
+    line-height: 1.5;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#container{
+    margin: auto;
+    background-color: blue;
+    max-width: 1200px;
+}
+#pageheader{
+    background-color: red;
+    height: 500px;
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(Images/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    border: 2px solid #250103;
+}
+#title{
+    color: white;
+    text-align: center;
+    padding-top: 240px;
+    width: 100%;
+}
+nav{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: black;
+    background-color: white;
+    border: 2px solid #250103;
+}
+nav a{
+    color: black;
+}
+main{
+    background-color:#8D3526 ;
+    min-height: 150px;
+    margin: auto;
+    color: white;
+    padding: 1rem;
+    border: 2px solid #250103;
+}
+#pagefooter{
+    background-color: #8D3526;
+    max-width: 1200px;
+    margin: auto;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid #250103;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+#pagefooter article{
+    background-color: red;
+    background-position: center center;
+    background-size: cover;
+    flex-shrink: 0;
+    max-width: 80%;
+    height: 200px;
+    aspect-ratio: 4/3;
+    border-radius: 25px;
+}
+#pagefooter a{
+    color: white;
+}
+
+#pagefooter h1{
+    width: 100%;
+}
+article a{
+    background-color: black;
+    padding: 3px;
+    border-radius: 25px;
+}
+#subfooter{
+    background-color: #8D3526;
+    border: 2px solid #250103;
+    margin: auto;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+#subfooter a{
+    color: white;
+}

@@ -4,18 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Journey to Mars</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        body{
-            background-image: url(Images/background.png);
-            background-attachment: fixed;
-            background-size:cover;
-            background-color: #250103;
-        }
+        #landing{
+    background-image: url(Images/home/landing.jpg);
+}
+#one{
+    background-image: url(Images/home/humantomars.jpg);
+}
+#two{
+    background-image: url(Images/home/twinrobots.jpg);
+}
+#three{
+    background-image: url(Images/home/physical.jpg);
+}
+#four{
+    background-image: url(Images/home/atmosphere.jpg);
+}
+#donations{
+    background-image: url(Images/home/donations.jpg);
+}
     </style>
 </head>
 <body>
-    <header></header>
-    <nav></nav>
-    <main></main>
+    <div id="container">
+        <div id="wrapper">
+            <header id="pageheader">
+                <div id="title">
+                    <h1>NASA's Journey to Mars: Home Page</h1>
+                </div>
+                <nav>
+                    <a href="index.html">Home</a> |
+                    <a href="humanstomars.html">Humans to Mars</a> |
+                    <a href="twinrobots.html">Twin Rovers</a> |
+                    <a href="physicalcharacteristics.html">Phyiscal Characteristics</a> |
+                    <a href="atmosphere.html">Atmosphere</a> |
+                    <a href="donations.html">Donations</a>
+                </nav>
+            </header>
+            <div id="media"></div>
+            <main>
+                <h1>NASA Mars Exploration</h1>
+                <p>NASA is currently working on exploring Mars. This mission is important to understand more about the evolution of the planet, to search for possible life, and most of all, to prepare for humans to explore Mars in person since that has yet to be done.</p>
+            </main>
+            <footer id="pagefooter">
+                <article id="landing"><a href="index.html">Home Page</a></article>
+                <article id="one"><a href="humanstomars.html">Humans to Mars</a></article>
+                <article id="two"><a href="twinrobots.html">Twin Robots</a></article>
+                <article id="three"><a href="physicalcharacteristics.html">Phyiscal Characteristics</a></article>
+                <article id="four"><a href="atmosphere.html">Atmosphere</a></article>
+                <article id="donations"><a href="donations.html">Donations</a></article>
+            </footer>
+            <footer id="subfooter">
+                <a href="#pageheader">Back to the Top</a>
+                <p> &copy; Career Skills Challenge Practice 2025 - 
+                    <script>
+                        window.document.write(new Date().getFullYear());
+                    </script>
+                </p> 
+            </footer>
+        </div>
+    </div>
+    
 </body>
 </html>
