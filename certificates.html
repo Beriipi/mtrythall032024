@@ -6,7 +6,20 @@
     <title>Aiden Trythall Certificates</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-
+        iframe{
+            width:100%;
+            max-width:1000px;
+            aspect-ratio: 4/3;
+            display:block;
+            margin:auto;
+            border:2px solid black;
+        }
+        #osha{
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -26,19 +39,18 @@
         </nav>
     </header>
     <!-- end pageheader -->
-
-    <!-- begin media -->
-    <!-- <section id="media">
-        <iframe src="https://www.youtube.com/embed/v6Q6y4-qKac?si=lVxfB4XmNL-MJanG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section> -->
-    <!-- end media -->
     
     <!-- begin pagecontent -->
     <main id="pagecontent">
         <img id="ponyo" src="Images/ghibli/pagecontent.jpg" alt="ponyo">
         <div class="container">
             <h1>Certificates</h1>
-            <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolorem numquam voluptates voluptatum nostrum molestiae voluptas dicta tempora expedita itaque assumenda ducimus consequuntur quibusdam, perferendis quos hic aspernatur repellat in iusto sunt aperiam modi officiis distinctio eum? Nemo, amet ut, inventore, ipsum error dolorum perferendis accusantium quaerat quidem vel ab eaque! Tempora temporibus atque iste fugit numquam aliquid nam, non delectus cumque quibusdam reprehenderit necessitatibus hic voluptatem facilis error fuga deleniti quos minus magnam! Harum quidem quos qui eius tenetur ad recusandae obcaecati eveniet, labore ex assumenda dolorem vero voluptas! Assumenda vitae officiis corrupti laboriosam soluta animi ratione. Quia, ipsa.</h3>
+            <h2>Culinary Arts - OSHA 10 hour</h2>
+            <img id="osha" src="Images/Certificates/Culinary10HourOsha.jpg">
+            <h2>Web App Dev. - MyCareerTech Communication</h2>
+            <iframe src="Images/Certificates/MyCareerTechCommunication.pdf" frameborder="0"></iframe>
+            <h2>Web App Dev. - 3 Minute Typing.com Test</h2>
+            <iframe src="Images/Certificates/3minuteTypingTest.pdf" frameborder="0"></iframe>
         </div>
     </main>
     <!-- end pagecontent -->
@@ -66,7 +78,6 @@
             <a target="_blank" href="https://chsserver01.org/chaggy.net/colortheory/colorscheme2/index-en.html">color schemes</a> |
             <a target="_blank" href="https://coalingahuron.aeries.net/">aeries</a> |
             <a target="_blank" href="https://chs.chusd.org/">chs</a> |
-            <a target="_blank" href="https://mycareertech.com/">mychareertech</a> |
             <a target="_blank" href="https://classroom.google.com/c/NzA0Mzc3NDU4NDA4">classroom</a> |
             <a target="_blank" href="https://codepip.com/games/">codepip</a> |
             <a target="_blank" href="https://app.minga.io/home?_ga=2.42973159.357855317.1696525482-370183285.1692728769&_gl=1*t0bjlq*_ga*MzcwMTgzMjg1LjE2OTI3Mjg3Njk.*_ga_KR90T0D2Q4*MTY5NjUyNTQ4Mi40LjEuMTY5NjUyNjAwNi42MC4wLjA.*_gcl_au*OTg0MTI4ODA1LjE2OTI3Mjg3Njk.">minga</a>
@@ -78,13 +89,18 @@
     <!-- begin subfooter -->
     <footer id="subfooter">
         <h3 id="subfooterlinks">
-            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">youtube</a> |
-            <a target="_blank" href="https://www.roblox.com/home">roblox</a> |
-            <a target="_blank" href="https://hianime.to/">h!anime</a>
+            <a href="index.html">Home</a> |
+            <a href="worksamples.html">Worksamples</a> |
+            <a href="certificates.html">Certificates</a>
         </h3>
         <p> &copy; Aiden Trythall 2024 - 
             <script>
                 window.document.write(new Date().getFullYear());
+                
+                window.addEventListener('resize', refresh);
+                function refresh(){
+                    window.location.reload(true);
+                }
             </script>
         </p> 
         <div id="totoros"></div>
