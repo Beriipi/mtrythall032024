@@ -76,17 +76,18 @@ blockquote{
     height: 50px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:center;
     position: absolute;
     bottom: 10px;
     left: 10px;
     right: 10px;
     color: #A0ADC1;
+    gap: 40px
 }
-#pagenav>a{
+#pagenav a{
     color: #A0ADC1;
 }
-#pagenav>a:hover{
+#pagenav a:hover{
     color: slategray;
 }
 #media{

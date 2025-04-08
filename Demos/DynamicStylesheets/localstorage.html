@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <script>
+        //local storage
+        window.localStorage.clear(); //clear local storage for testing purposes
+        console.log("Aiden");
+        console.log(localStorage.length); //check the number of items in local storage
+
+        //create object
+        let teacher = {
+            name: "Manuel Chagoyan",
+            class: "Web App Development",
+            period: "3rd",
+            school: "Coalinga High School",
+            year: "2024 - 2025"
+        }
+
+        //alert(teacher);
+
+        //display object info
+        console.log(teacher.name);
+        console.log(teacher.class);
+        console.log(teacher.period);
+        console.log(teacher.school);
+        console.log(teacher.year);
+
+        //store object info in localStorage
+        localStorage.setItem("name", teacher.name);
+        localStorage.setItem("class", teacher.class);
+        localStorage.setItem("period", teacher.period);
+        localStorage.setItem("school", teacher.school);
+        localStorage.setItem("year", teacher.year);
+
+        //clear localStorage
+        //localStorage.clear();
+        console.log(localStorage.getItem("class"));
+        console.log(localStorage.getItem("school"));
+    </script>
+</body>
+</html>

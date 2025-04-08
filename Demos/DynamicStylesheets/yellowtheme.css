@@ -1,0 +1,12 @@
+body{
+    background-color: yellow;
+}
+h1{
+    color: black;
+    text-align: center;
+    background-color: rgb(204, 173, 0);
+    border: 2px solid black;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+}
