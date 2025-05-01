@@ -2,78 +2,76 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HTML Forms</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="redtheme.css" id="linktheme">
 <style>
-body {
-    background-color: #333;
-}
 
-h1 {
-    color: white;
-    text-align: center;
-}
+    h1 {
+        color: black;
+        text-align: center;
+    }
 
-#formcontainer {
-    width: 60%;
-    max-width: 600px;
-    min-height: 300px;
-    padding: 1rem;
-    background-color: silver;
-    border: 2px solid black;
-    margin: auto;
-}
+    #formcontainer {
+        width: 60%;
+        max-width: 600px;
+        min-height: 300px;
+        padding: 1rem;
+        background-color: silver;
+        border: 2px solid black;
+        margin: auto;
+    }
 
-p {
-    background-color: white;
-    border: 1px solid black;
-    padding: 1rem;
-    margin: auto;
-    max-width: 500px;
-    min-height: 200px;
-}
+    p {
+        background-color: white;
+        border: 1px solid black;
+        padding: 1rem;
+        margin: auto;
+        max-width: 500px;
+        min-height: 200px;
+    }
 
-fieldset {
-    padding: 1rem;
-    margin: 1rem;
-}
+    fieldset {
+        padding: 1rem;
+        margin: 1rem;
+    }
 
-legend {
-    font-family: Arial, Helvetica, sans-serif;
-}
+    legend {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-label {
-    padding: .25rem;
-}
+    label {
+        padding: .25rem;
+    }
 
-input[type="text"] {
-    background-color: white;
-    border: 2px solid black;
-}
+    input[type="text"] {
+        background-color: white;
+        border: 2px solid black;
+    }
 
-input[type='text']::placeholder {
-    color: gray;
-    font-style: italic;
-}
+    input[type='text']::placeholder {
+        color: gray;
+        font-style: italic;
+    }
 
-button {
-    padding: .5rem;
-    background-color: black;
-    color: white;
-    margin-bottom: .5rem;
-    margin-top: .5rem;
-}
+    button {
+        padding: .5rem;
+        background-color: black;
+        color: white;
+        margin-bottom: .5rem;
+        margin-top: .5rem;
+    }
 
-input[name='language'] {
-    outline: 2px solid black;
-    outline-style: dashed;
-}
+    input[name='language'] {
+        outline: 2px solid black;
+        outline-style: dashed;
+    }
 
-input[name='language']:checked {
+    input[name='language']:checked {
         accent-color: crimson;
-outline-color: crimson;
-}
+        outline-color: crimson;
+    }
 </style>
 </head>
 
@@ -106,16 +104,15 @@ outline-color: crimson;
 
     <fieldset>
         <legend>Select Element</legend>
-        <select name="themeselector" id="themeselector">
-            <option value="redtheme">Red Theme</option>
-            <option value="greentheme">Green Theme</option>
-            <option value="yellowtheme">Yellow Theme</option>
+        <select name="themeselector" id="themeselector" onchange="updateTheme()">
+            <option value="redtheme.css">Red Theme</option>
+            <option value="greentheme.css">Green Theme</option>
+            <option value="yellowtheme.css">Yellow Theme</option>
         </select>
 
-        <br>
-
+        <!-- <br>
         <button id="saveselectbutton">Save Select to Local Storage</button>
-        <button id="loadselectbutton">Load Select from Local Storage</button>
+        <button id="loadselectbutton">Load Select from Local Storage</button> -->
 
     </fieldset>
 
@@ -152,7 +149,6 @@ outline-color: crimson;
             }
             else{
                 paragraphOutput.textContent = "No name found in local storage.";
-                
             };
         });
             /*
@@ -187,6 +183,30 @@ outline-color: crimson;
                 }
                 else{
                     paragraphOutput.textContent = "No language found in local storage.";
+                }
+            });
+
+            //select section
+            let linkTheme; //link tag to the style sheet
+            let selTheme; //selection form control to select the theme
+
+            linkTheme = document.querySelector('#linktheme');
+            selTheme = document.querySelector('#themeselector');
+
+            function updateTheme(){
+                linkTheme.href = selTheme.value; //updates the style sheet
+                localStorage.setItem('selectedTheme2522', selTheme.value);
+            }
+
+            window.addEventListener('load', function(){
+                
+                let savedTheme = localStorage.getItem('selectedTheme2522');
+                if(savedTheme !== null){
+                    linkTheme.href = savedTheme; //load stylesheet
+                    selTheme.value = savedTheme; //load selection
+
+                    //provide feedback in paragraph output
+                    paragraphOutput.textContent = `${selTheme.value} loaded from local storage.`;
                 }
             });
     </script>
