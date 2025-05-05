@@ -30,7 +30,20 @@
         function updateStylesheet(){
             //alert(selStylesheet.value);
             styleLink.href = selStylesheet.value; //update the href attribute of the link element
+
+            //save to local storage
+            localStorage.setItem('selectedStylesheet2522', selStylesheet.value);
         }
+        window.addEventListener('load', function(){
+            let savedStylesheet = localStorage.getItem('selectedStylesheet2522');
+            //alert(savedStylesheet);
+            if(savedStylesheet !== null){
+                //link to the saved stylesheet
+                styleLink.href = savedStylesheet;
+                //match the drop down box (select) to saved stylesheet
+                selStylesheet.value = savedStylesheet;
+            }
+        });
     </script>
 </body>
 </html>
