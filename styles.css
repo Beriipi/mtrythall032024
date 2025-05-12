@@ -1,6 +1,19 @@
 :root{
     --color-primary: #f8f8f8;
 }
+/*reset browser*/
+/* *, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+/* fix browser bounce */
+body{
+    overflow-x:auto;
+    width: 100%;
+    overscroll-behavior: none;
+}
 html{
     scroll-behavior: smooth;
 }

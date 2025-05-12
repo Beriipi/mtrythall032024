@@ -1,0 +1,320 @@
+:root{
+    --color-primary: #f8f8f8;
+}
+html{
+    scroll-behavior: smooth;
+}
+iframe{
+    max-width: 75rem;
+}
+body{
+    background-image: url(Images/Arcane/bcg.jpg);
+    background-attachment: fixed;
+    background-size:cover;
+    background-color: #5AD0D3;
+    line-height: 1.5;
+}
+#space{
+    background-color: none;
+    width: 100%;
+    height: 50px;
+}
+.container{
+    background-color: var(--color-primary);
+    min-height: 10rem;
+    margin: auto;
+    max-width: 75rem;
+    padding: 5px;
+    color: black;
+}
+#pageheader{
+    min-height: 250px;
+    background-color: #A0ADC1;
+    padding: 1rem;
+    position: relative;
+    border-radius: 1.5rem 1.5rem 0 0;
+    border: 4px solid var(--color-primary);
+    background-image: url(Images/Arcane/header.jpg);
+    background-position: center center;
+    background-size: cover;
+    transition: all 2s;
+}
+#logo{
+    height: 100px;
+    width: 100px;
+    background-color: none;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - (50px));
+    background-image: url(Images/Arcane/logo.jpg);
+    background-position: center center;
+    background-size: cover;
+    border: 2px solid black;
+    border-radius: 50%;
+    transition: all 2s;
+    z-index: 1;
+}
+blockquote{
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--color-primary);
+    text-shadow: 2px 2px 2px #D4ECC0;
+    padding-top: 40px;
+}
+#quote{
+    background-color: none;
+    color: var(--color-primary);
+    text-align: right;
+    text-shadow: 1px 1px 1px #D4ECC0;
+    width: 80%;
+    margin: auto;
+}
+#pagenav{
+    background-color: var(--color-primary);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #A0ADC1;
+    gap: 40px
+}
+#pagenav a{
+    color: #A0ADC1;
+}
+#pagenav a:hover{
+    color: slategray;
+}
+#media{
+    min-height: 200px;
+    background-color: #43445D;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+}
+iframe{
+    width: 80%;
+    aspect-ratio: 16/9;
+    margin: auto;
+    display: block;
+}
+#career{
+    min-height: 200px;
+    background-color: #1B3E67;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+}
+#career .container{
+    background-image: url(Images/Arcane/career.gif);
+    background-position: center center;
+    background-size: cover;
+    min-height: 300px;
+    color: var(--color-primary);
+    transition: all 2s;
+}
+#pagecontent{
+    min-height: 200px;
+    background-color: #372121;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+}
+#pagecontent .container{
+    color: slategray;
+}
+#pagecontent .container h1{
+    text-align: center;
+}
+
+#keyassignments{
+    min-height: 200px;
+    background-color: #638994;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+}
+#keyassignments .container{
+    color: slategray;
+}
+#keyassignments .container h1{
+    text-align: center;
+}
+
+#intro{
+    max-height: 300px;
+    max-width: 80%;
+    aspect-ratio: 16/9;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    background-image: url(Images/Arcane/pagecontent.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+#semesters{
+    min-height: 200px;
+    background-color: black;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+}
+#flexbox1{
+    display: flex;
+}
+#semester1{
+    background-color: var(--color-primary);
+    width: 50%;
+    min-height: 1000px;
+    background-image: url(Images/Arcane/semester1tall2.jpg);
+    background-position: center center;
+    color: var(--color-primary);
+}
+#semester1 ul li a{color: var(--color-primary);}
+#semester2 ul li a{color: black;
+}
+#semester2{
+    background-color: var(--color-primary);
+    width: 50%;
+    min-height: 1000px;
+    background-image: url(Images/Arcane/semester2tall2.jpg);
+    background-position: center center;
+    color: black;
+}
+#semesterlist{
+    padding: 1rem;
+}
+#pagefooter{
+    min-height: 200px;
+    background-color: #63B188;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+    text-align:center;
+}
+#pagefooter .container{
+    min-height: 264px;
+    background-image: url(Images/Arcane/pagefooter.gif);
+    background-position: center center;
+    background-size: cover;
+    color: #56ACF7;
+    transition: all 2s;
+}
+#topnav{
+    min-height: 200px;
+    background-color: #D87C41;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+    text-align:center;
+}
+#topnav .container{
+    min-height: 400px;
+    background-image: url(Images/Arcane/topnav.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: var(--color-primary);
+    transition: all 2s;
+}
+#topnav a{
+    color: var(--color-primary);
+}
+#topnav a:hover{
+    color:#703E7E;
+}
+#subfooter{
+    min-height: 150px;
+    background-color: lightpink;
+    padding: 1rem;
+    border: 4px solid var(--color-primary);
+    border-radius: 0 0 1.5rem 1.5rem;
+    background-image: url(Images/Arcane/subfooter.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: var(--color-primary);
+    text-align: center;
+    position: relative;
+    transition: all 2s;
+}
+/* Footer links */
+#footerlinks>a{
+    color: #56ACF7;
+}
+#footerlinks>a:hover{
+    color:#F56EA7;
+}
+#subfooterlinks>a{
+    color: var(--color-primary);
+}
+#subfooterlinks>a:hover{
+    color: #F0AD69;
+}
+#career ul li a{color: var(--color-primary);}
+#canvasdrawing2{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    background-image: url(Images/IndexImgs/Screenshot\ 2024-11-12\ at\ 9.46.22\ AM.png);
+    background-size: contain;
+    transition: all 2s;
+}
+#canvasdrawing2:hover{
+    transform: rotate(10deg);
+}
+
+/* media queries */
+@media only screen and (max-width:768px){
+    
+    #logo{
+        left: 30px;
+    }
+    #flexbox1{
+    display: block;
+    }
+    #semester1{
+        background-image: url(Images/Arcane/semester1.jpg);
+        min-height: 500px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+    }
+    #semester2{
+        background-image: url(Images/Arcane/semester2.jpg);
+        min-height: 500px;
+        width: 100%;
+        background-position: center center;
+        background-size: cover;
+        color: var(--color-primary);
+    }
+    #semester2 ul li a{color: var(--color-primary);}
+    }
+@media only screen and (min-width:1050px){
+    #pageheader{
+        min-height: 450px;
+    }
+    #career{
+        background-color: #095559;
+    }
+    #career .container{
+        min-height: 400px;
+    }
+    #pagefooter{
+        background-color: #211117;
+    }
+    #pagefooter .container{
+        min-height: 600px;
+    }
+    #semester1{
+        background-image: url(Images/Arcane/semester1tall.jpg);
+        background-position: center center;
+        background-size: cover;
+    }
+    #semester2{
+        background-image: url(Images/Arcane/semester2tall.jpg);
+        background-position: center center;
+        background-size: cover;
+        color: var(--color-primary);
+    }
+    #semester2 ul li a{color: var(--color-primary);}
+    #subfooter{
+        min-height: 300px;
+    }
+}
