@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport"  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
     <title>Aiden Trythall Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-    </style>
+    <link id="stylelink" rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <select name="selstylesheet" id="selstylesheet" onchange="updateStylesheet()">
+        <option value="styles.css">Ghibli Theme</option>
+        <option value="styles2.css">Arcane Theme</option>
+    </select>
+
     <!-- (command + /) begin pageheader-->
         <div id="space"></div>
     <header id="pageheader">
         <a href="https://webappdesignwebpage.netlify.app/"><div id="logo"></div></a>
-        <blockquote>"I never want to regret not trying something. It's better to try and fail. I believe that."</blockquote>
+        <blockquote id="mainquote">"I never want to regret not trying something. It's better to try and fail. I believe that."</blockquote>
         <p id="quote">
             - Hayao Miyazaki
         </p>
@@ -36,19 +38,12 @@
         </div>
     </nav>
     <!-- end topnav -->
-
-    <!-- begin media -->
-    <section id="media">
-        <iframe src="https://www.youtube.com/embed/v6Q6y4-qKac?si=lVxfB4XmNL-MJanG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-    <!-- end media -->
-    
     <!-- begin pagecontent -->
     <main id="pagecontent">
-        <img id="ponyo" src="Images/ghibli/pagecontent.jpg" alt="ponyo">
+        <div id="intro"></div>
         <div class="container">
             <h1>Introduction</h1>
-            <h3>Hello, my name is Aiden. I'm a senior at Coalinga highschool. This is my third year taking web design classes, and I am now in Web App Development, meaning if I pass this class I get a cord at graduation! That's pretty exciting. I quite like my classes this year. In my freetime, I enjoy playing videogames, watching anime (especially studio ghibli), and listening to music a lot, and sometimes reading and drawing though those are kind of rare.</h3>
+            <h3>Hello, my name is Aiden. I'm a senior at Coalinga highschool. This is my third year taking web design classes, and I am now in Web App Development, meaning if I pass this class I get a cord at graduation! That's pretty exciting. I quite like my classes this year. In my freetime, I enjoy playing videogames, watching anime, and listening to music a lot, and sometimes reading and drawing though those are kind of rare.</h3>
         </div>
     </main>
     <!-- end pagecontent -->
@@ -147,5 +142,64 @@
         <div id="sootsprites"></div>
     </footer>
     <!-- end pagefooter -->
+    
+
+    <!-- stylesheets begin -->
+    
+
+    <script>
+        // select the select control (dropdown)
+        let selStylesheet = document.querySelector('#selstylesheet');
+
+        //select the link to external stylesheet
+        let styleLink = document.querySelector('#stylelink');
+        
+        let mainQuote = document.querySelector('#mainquote');
+        let quote = document.querySelector('#quote');
+
+        let iframe = document.querySelector('#iframe');
+
+        function updateStylesheet(){
+            styleLink.href = selStylesheet.value; 
+
+            //save to local storage
+            localStorage.setItem('selectedStylesheet2522', selStylesheet.value);
+
+            updateQuote();
+
+            
+
+        }
+
+        window.addEventListener('load', function(){
+            let savedStylesheet = localStorage.getItem('selectedStylesheet2522');
+            
+            if(savedStylesheet !== null){
+                //link to the saved style sheet
+                styleLink.href = savedStylesheet;
+                //match the dropbox (select) to saved stylesheet
+                selStylesheet.value = savedStylesheet;
+            }
+
+            updateQuote();
+            
+
+        });
+
+        function updateQuote(){
+                if(styleLink.attributes.href.value == "styles.css"){
+                mainQuote.textContent = "I never want to regret not trying something. It's better to try and fail. I believe that.";
+                quote.textContent = "- Hayao Miyazaki"
+
+                }
+                else{
+                mainQuote.textContent = "I had a different name back then. Powder. You sort of remind of her.";
+                quote.textContent = "- Jinx"
+                }
+            }
+
+    </script>
+    <!-- stylesheets end -->
+
 </body>
 </html>
